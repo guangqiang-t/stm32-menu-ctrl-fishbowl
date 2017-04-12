@@ -1,0 +1,39 @@
+Creat:2016-02-12 17:44:12
+
+USE_STDPERIPH_DRIVER,STM32F10X_HD
+
+function comment
+/**
+  * @brief Description
+  * @param None
+  * @param  
+  * @retval None
+  */
+  
+/**  @file  [file‐name]   
+  *  @brief  brief  description   
+  *  @author  <list  of  authors>   
+  *  [@author  <authors  description>]     
+  *  @date  <date>   
+  *  @version  <version  number>     
+  *  @note   
+  *  detailed  description   
+*/
+
+/**   
+  *  @brief  brief  description   *  @author  <list  of  authors>   
+  *  {@param[in|out]  <parameter‐name>  <parameter  description>} 
+  *  @exception  <exception‐object>  <exception  description>
+  *  {@exception  <exception‐object>  <exception  description>}
+  *  @return  <description  of  the  return  value>
+  *  {@return  <description  of  the  return  value>}
+  *  @note
+  *  detailed  description   
+  *  @remarks  <remark  text>
+  *  {@remarks  <remark  text>}
+  *  [@deprecated  <description>]
+  *  [@since  when(time  or  version)]
+  *  [@see  references{,references}]
+  */
+ 
+ ref http://wenku.baidu.com/link?url=p8JnR-iU9IAf1poJexP90G5e5_7-6iw1L4p88FLbnmGMPlzv8wg9YZtKYjGlK9XzSQE1qgPB8WdRbCfaleh1_DVQa-sV2q5N8afH9JqoftG
