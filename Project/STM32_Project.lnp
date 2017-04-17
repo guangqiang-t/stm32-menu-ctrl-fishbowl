@@ -10,6 +10,7 @@
 ".\usart.o"
 ".\delay.o"
 ".\ds1302.o"
+".\12864s.o"
 ".\main.o"
 ".\led.o"
 --library_type=microlib --strict --scatter ".\STM32_Project.sct"

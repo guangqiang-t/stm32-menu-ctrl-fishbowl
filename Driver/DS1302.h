@@ -8,8 +8,8 @@ extern unsigned char TimeString[];
 
 void Ds1302Write(unsigned char addr, unsigned char dat);
 unsigned char Ds1302Read(unsigned char addr);
-void Ds1302Init();
-void Ds1302ReadTime();
+void Ds1302Init(void);
+void Ds1302ReadTime(void);
 void TimeConvertToString(void);
 
 #endif
