@@ -167,7 +167,7 @@
           </Flash1>
           <bUseTDR>0</bUseTDR>
           <Flash2>STLink\ST-LINKIII-KEIL_SWO.dll</Flash2>
-          <Flash3></Flash3>
+          <Flash3>"" ()</Flash3>
           <Flash4></Flash4>
         </Utilities>
         <TargetArmAds>
@@ -438,9 +438,14 @@
               <FilePath>..\Libraries\src\stm32f10x_usart.c</FilePath>
             </File>
             <File>
-              <FileName>stm32f10x_flash.c</FileName>
+              <FileName>stm32f10x_spi.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Libraries\src\stm32f10x_flash.c</FilePath>
+              <FilePath>..\Libraries\src\stm32f10x_spi.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_tim.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Libraries\src\stm32f10x_tim.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -472,6 +477,11 @@
               <FileType>1</FileType>
               <FilePath>..\Driver\12864s.c</FilePath>
             </File>
+            <File>
+              <FileName>bsp_key.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Driver\bsp_key.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -486,6 +496,21 @@
               <FileName>LED.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\User\LED.c</FilePath>
+            </File>
+            <File>
+              <FileName>menu.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\menu.c</FilePath>
+            </File>
+            <File>
+              <FileName>DisTimer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\DisTimer.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_it.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\stm32f10x_it.c</FilePath>
             </File>
           </Files>
         </Group>

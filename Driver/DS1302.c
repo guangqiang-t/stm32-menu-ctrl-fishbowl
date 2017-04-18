@@ -17,51 +17,66 @@ unsigned char TimeString[9]={"12-00-00\0"};
 
 void DS1302_Config(void)
 {
-	
+	GPIO_InitTypeDef GPIO_InitStructure;
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_3|GPIO_Pin_4|GPIO_Pin_5;//c0 c1 c2 c3
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+	GPIO_Init(GPIOA,&GPIO_InitStructure);
 }
 
 void DS1302_RST_L(void)
 {
-	
+	GPIO_ResetBits(GPIOA,GPIO_Pin_5);
 }
 
 void DS1302_RST_H(void)
 {
-	
+	GPIO_SetBits(GPIOA,GPIO_Pin_5);
 }
 
 void DS1302_SCLK_L(void)
 {
-	
+	GPIO_ResetBits(GPIOA,GPIO_Pin_3);
 }
 
 void DS1302_SCLK_H(void)
 {
-	
+	GPIO_SetBits(GPIOA,GPIO_Pin_3);
 }
 
 void DS1302_DSIO_L(void)
 {
-	
+	GPIO_ResetBits(GPIOA,GPIO_Pin_4);
 }
 
 void DS1302_DSIO_H(void)
 {
-	
+	GPIO_SetBits(GPIOA,GPIO_Pin_4);
 }
 
 uint8_t DS1302_DSIO_READ(void)
 {
-	return 0;
+	return GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_4);
 }
 
 void DS1302_DSIO_IN(void)
 {
-	
+	GPIO_InitTypeDef GPIO_InitStructure;
+//	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_4;//c0 c1 c2 c3
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
+	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+	GPIO_Init(GPIOA,&GPIO_InitStructure);
 }
 void DS1302_DSIO_OUT(void)
 {
-	
+	GPIO_InitTypeDef GPIO_InitStructure;
+//	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_4;//c0 c1 c2 c3
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+	GPIO_Init(GPIOA,&GPIO_InitStructure);
 }
 
 //-------------------end io ctrl---------------------------------------

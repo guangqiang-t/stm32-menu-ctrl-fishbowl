@@ -6,8 +6,8 @@
 #include "delay.h"
 
 //#define PORT GPIO_B
-#define SCLK GPIO_Pin_10 //B-10
-#define SDATA GPIO_Pin_11 //B-11
+#define SCLK GPIO_Pin_0 //B-10
+#define SDATA GPIO_Pin_1 //B-11
 
 
 

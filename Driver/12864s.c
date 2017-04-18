@@ -45,7 +45,7 @@ void LcdWriteData(unsigned char data)
   LcdSendByte(0xFA);
   LcdSendByte(data&0xF0);
   LcdSendByte((data<<4)&0xF0);
-  DelayUs(10);
+  DelayUs(50);
 }
  
 void LcdInit(void)
