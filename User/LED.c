@@ -7,15 +7,15 @@
   * @retval None
   */
 
-void LEDInit(void)
+void led_config(void)
 {
 	GPIO_InitTypeDef GPIO_InitStructure;
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC, ENABLE);
-	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0|GPIO_Pin_1|GPIO_Pin_2|GPIO_Pin_3;	//c0 c1 c2 c3
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_13;	//c13
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
-	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_2MHz;
 	GPIO_Init(GPIOC,&GPIO_InitStructure);
-	GPIO_SetBits(GPIOC,GPIO_Pin_0|GPIO_Pin_1|GPIO_Pin_2|GPIO_Pin_3);
+	GPIO_SetBits(GPIOC,GPIO_Pin_13);
 }
 
 /**
@@ -24,16 +24,9 @@ void LEDInit(void)
   * @param  
   * @retval None
   */
-void LEDOFF(unsigned char index)
+void led_off(void)
 {
-	switch(index)
-	{
-		case 0:GPIO_ResetBits(GPIOC,GPIO_Pin_0);break;
-		case 1:GPIO_ResetBits(GPIOC,GPIO_Pin_1);break;
-		case 2:GPIO_ResetBits(GPIOC,GPIO_Pin_2);break;
-		case 3:GPIO_ResetBits(GPIOC,GPIO_Pin_3);break;
-		default:break;
-	}
+	GPIO_ResetBits(GPIOC,GPIO_Pin_13);
 }
 
 /**
@@ -42,14 +35,7 @@ void LEDOFF(unsigned char index)
   * @param  
   * @retval None
   */
-void LEDON(unsigned char index)
+void led_on(void)
 {
-	switch(index)
-	{
-		case 0:GPIO_SetBits(GPIOC,GPIO_Pin_0);break;
-		case 1:GPIO_SetBits(GPIOC,GPIO_Pin_1);break;
-		case 2:GPIO_SetBits(GPIOC,GPIO_Pin_2);break;
-		case 3:GPIO_SetBits(GPIOC,GPIO_Pin_3);break;
-		default:break;
-	}
+	GPIO_SetBits(GPIOC,GPIO_Pin_13);
 }

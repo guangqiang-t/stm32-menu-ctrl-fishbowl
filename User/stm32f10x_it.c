@@ -24,7 +24,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x_it.h"
 #include "stm32f10x.h"
-
+#include "DisTimer.h"
 
 
 /** @addtogroup STM32F10x_StdPeriph_Template
@@ -152,5 +152,9 @@ void NVIC_Config(void)
 }
 
 
+void TIM3_IRQHandler(void)
+{
+		Timer3_Isr();
+}
 
 /******************* (C) COPYRIGHT 2011 STMicroelectronics *****END OF FILE****/

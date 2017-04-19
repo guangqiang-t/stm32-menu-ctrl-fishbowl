@@ -1,5 +1,5 @@
 --cpu Cortex-M3
-".\startup_stm32f10x_hd.o"
+".\startup_stm32f10x_md.o"
 ".\core_cm3.o"
 ".\system_stm32f10x.o"
 ".\misc.o"
@@ -13,6 +13,8 @@
 ".\ds1302.o"
 ".\12864s.o"
 ".\bsp_key.o"
+".\iic.o"
+".\bh1750.o"
 ".\main.o"
 ".\led.o"
 ".\menu.o"

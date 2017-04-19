@@ -5,6 +5,6 @@
 #include "stm32f10x.h"
 
 void Timer3Config(uint16_t nms);//max 260   65535/250 000=0.26214
-
+void Timer3_Isr(void);
 
 #endif //_dis_timer_H_

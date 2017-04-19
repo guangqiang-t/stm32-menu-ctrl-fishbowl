@@ -2,37 +2,43 @@
 
 #define LOCKED (1)
 #define UNLOCKED (0)
-#define ERROR_LOCKED (INT16_MIN)
+#define ERROR_LOCKED (INT32_MIN)
 
-menu_list *g_menu;
-menu_list m[6];
-unsigned char m_name[7][16]={"sun","temp","huan","light","oxyge"};
+menu_list m[6];//all menu list strust 
+menu_list *g_menu=m;
+uint8_t m_name[7][16]={"guangzhao","wendu","huanshui","dengguang","chongyang","shuixunhuan"};
+uint8_t  null[]="NULL";// null pointer to this 
+uint8_t ext[]="2102";//just for  test
+
 
 void menu_init(menu_list *m,\
-				unsigned id,\
+				uint8_t id,\
 				void *pre,\
-				unsigned char lock,\
-				unsigned char *nam,\
-				unsigned int value,\
+				uint8_t lock,\
+				uint8_t *nam,\
+				int32_t value,\
+				void *ext_data,\
 				void *next)
+
 {
 	m->id=id;
 	m->prev_menu=(menu_list* )pre;
 	m->lock=lock; 
 	m->name=nam;
 	m->val=value;
+	m->ext_data = (uint8_t *)ext_data;
 	m->next_menu=(menu_list* )next;
 }
 
 void menu_all_config(void)
 {
-	menu_init(&m[0],1,&m[5],0,m_name[0],200,&m[1]);
-	menu_init(&m[1],2,&m[0],0,m_name[1], 25,&m[2]);
-	menu_init(&m[2],3,&m[1],0,m_name[2],  0,&m[3]);
-	menu_init(&m[3],4,&m[2],0,m_name[3], 30,&m[4]);
-	menu_init(&m[4],5,&m[3],0,m_name[4],  1,&m[5]);
-	menu_init(&m[5],6,&m[4],0,m_name[5],  1,&m[0]);
-	g_menu=&m[1];
+	menu_init(&m[0],1,&m[5],0,m_name[0],200,ext,&m[1]);
+	menu_init(&m[1],2,&m[0],0,m_name[1], 25,null,&m[2]);
+	menu_init(&m[2],3,&m[1],0,m_name[2],  0,null,&m[3]);
+	menu_init(&m[3],4,&m[2],0,m_name[3], 30,null,&m[4]);
+	menu_init(&m[4],5,&m[3],0,m_name[4],  1,null,&m[5]);
+	menu_init(&m[5],6,&m[4],0,m_name[5],600,null,&m[0]);
+	//g_menu=&m[1];
 }
 
 void menu_page_up(void)
@@ -55,7 +61,7 @@ void menu_unlock(menu_list *p)
 	p->lock=UNLOCKED;
 }
 
-int16_t menu_set_val(menu_list *p,int16_t v)
+int32_t menu_set_val(menu_list *p,int32_t v)
 {
 	if(p->lock == LOCKED)
 	{
@@ -66,19 +72,10 @@ int16_t menu_set_val(menu_list *p,int16_t v)
 		p->val=v; // set val success 
 		return v;
 	}
-	
 }
 
 void menu_display(void)
 {
-	printf("%s ---- %d \n",g_menu->name,g_menu->val);
+	printf("%d:%s-%d-ext-%s\r\n",g_menu->id,g_menu->name,g_menu->val,(uint8_t *)(g_menu->ext_data));
 }
-
-
-
-
-
-
-
-
 

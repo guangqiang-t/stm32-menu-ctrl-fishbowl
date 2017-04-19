@@ -3,8 +3,8 @@
 
 #include "stm32f10x.h"
 
-void LEDInit(void);
-void LEDON(unsigned char index);
-void LEDOFF(unsigned char index);
+void led_config(void);
+void led_on(void);
+void led_off(void);
 
 #endif
