@@ -46,6 +46,8 @@ void PendSV_Handler(void);
 void SysTick_Handler(void);
 	
 void NVIC_Config(void);
+void TIM3_IRQHandler(void);
+void EXTI2_IRQHandler(void);
 
 #ifdef __cplusplus
 }

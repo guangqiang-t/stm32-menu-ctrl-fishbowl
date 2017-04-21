@@ -9,6 +9,7 @@
 #include "DisTimer.h"
 #include "bh1750.h"
 #include "IIC.h"
+#include "key.h"
 
 
 int main (void)
@@ -23,6 +24,8 @@ int main (void)
 	DelayMs(200);
 	printf("sys init ok \r\n");
 	//GPIO_SetBits(GPIOB,GPIO_Pin_6);
+//	KeyConfig();
+	
 	
 	while(1)
 
@@ -34,8 +37,8 @@ int main (void)
 		bh1750ReadBuff(pBH1750_RAW);
 		gui32BH1750Value=GetLight(pBH1750_RAW);
 		
-		printf("lig is %d \r\n ",gui32BH1750Value);
-		
+		printf("lig is %d\r\n ",gui32BH1750Value);
+		printf("GetKey:%d\r\n",GetKey());
 		led_on();
 		DelayMs(100);
 		led_off();
