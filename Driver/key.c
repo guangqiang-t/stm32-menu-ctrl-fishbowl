@@ -1,5 +1,8 @@
 #include "key.h"
 #include "delay.h"
+#include "stdio.h"
+
+volatile  uint8_t gKey=0;
 
 void KeyConfig(void)
 {
@@ -12,18 +15,18 @@ void KeyConfig(void)
 	
 	GPIO_InitStructure.GPIO_Pin = (GPIO_Pin_10|GPIO_Pin_11|GPIO_Pin_12);//k1--k6  PB10-->PB15
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;
-	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_10MHz;
+	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 	GPIO_Init(GPIOB,&GPIO_InitStructure);
 	
 	GPIO_InitStructure.GPIO_Pin = (GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15|GPIO_Pin_0);	
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
-	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_10MHz;
+	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 	GPIO_Init(GPIOB,&GPIO_InitStructure);
 	GPIO_ResetBits(GPIOB,GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15);
 	GPIO_SetBits(GPIOB,GPIO_Pin_0);
 	
 	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_2;
-	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_10MHz;
+	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPD; 
 	GPIO_Init(GPIOA, &GPIO_InitStructure);
 	
@@ -35,7 +38,7 @@ void KeyConfig(void)
 	EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Rising;
 	EXTI_InitStructure.EXTI_LineCmd = ENABLE;
 	EXTI_Init(&EXTI_InitStructure);
-//	EXTI_PB2_Enable();
+	EXTI_PA2_Enable();
 	
 	NVIC_InitStructure.NVIC_IRQChannel = EXTI2_IRQn;
 	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 4;
@@ -51,27 +54,27 @@ void PortReset(void)
 
 	GPIO_InitStructure.GPIO_Pin = (GPIO_Pin_10|GPIO_Pin_11|GPIO_Pin_12);//k1--k6  PB10-->PB15
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;
-	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_10MHz;
+	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 	GPIO_Init(GPIOB,&GPIO_InitStructure);
 	
 	GPIO_InitStructure.GPIO_Pin = (GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15);	
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
-	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_10MHz;
+	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 	GPIO_Init(GPIOB,&GPIO_InitStructure);
 	GPIO_ResetBits(GPIOB,GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15);
-	
 }
 
-void EXTI_PB2_Enable(void)
+void EXTI_PA2_Enable(void)
 {
 	#if 0
 	EXTI_InitTypeDef EXTI_InitStructure;
 	
+	GPIO_EXTILineConfig(GPIO_PortSourceGPIOA, GPIO_PinSource2);
+	EXTI_DeInit();
 	EXTI_InitStructure.EXTI_Line = EXTI_Line2;
 	EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Interrupt;
 	EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Rising;
 	EXTI_InitStructure.EXTI_LineCmd = ENABLE;
-#include <stm32f10x.h>
 	EXTI_Init(&EXTI_InitStructure);
 	#else
 	EXTI->IMR = EXTI_Line2;
@@ -79,11 +82,12 @@ void EXTI_PB2_Enable(void)
 	GPIO_SetBits(GPIOB,GPIO_Pin_0);
 }
 
-void EXTI_PB2_Disable(void)
+void EXTI_PA2_Disable(void)
 {
 	#if 0
 	EXTI_InitTypeDef EXTI_InitStructure;
 	
+	EXTI_DeInit();
 	EXTI_InitStructure.EXTI_Line = EXTI_Line2;
 	EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Interrupt;
 	EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Rising;
@@ -97,46 +101,54 @@ void EXTI_PB2_Disable(void)
 
 uint8_t GetRow(void)
 {
+	
 	uint8_t tmp=0;
+	#if 1
 	GPIO_InitTypeDef GPIO_InitStructure;
 	GPIO_InitStructure.GPIO_Pin = (GPIO_Pin_10|GPIO_Pin_11|GPIO_Pin_12);
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
-	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_10MHz;
+	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 	GPIO_Init(GPIOB,&GPIO_InitStructure);
 	GPIO_ResetBits(GPIOB,GPIO_Pin_10|GPIO_Pin_11|GPIO_Pin_12);
 	
 	GPIO_InitStructure.GPIO_Pin = (GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15);	
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;
-	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_10MHz;
+	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 	GPIO_Init(GPIOB,&GPIO_InitStructure);
 
+	DelayUs(100);
 	
 	if(GPIO_ReadInputDataBit(GPIOB,GPIO_Pin_13)==0)tmp=1;
 	if(GPIO_ReadInputDataBit(GPIOB,GPIO_Pin_14)==0)tmp=2;
 	if(GPIO_ReadInputDataBit(GPIOB,GPIO_Pin_15)==0)tmp=3;
+	
+	#endif 
 	return tmp;
 }
 
 uint8_t GetCol(void)
 {
 	uint8_t tmp=0;
+	#if 0
 	GPIO_InitTypeDef GPIO_InitStructure;
 	GPIO_InitStructure.GPIO_Pin = (GPIO_Pin_10|GPIO_Pin_11|GPIO_Pin_12);
-	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;
-	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_10MHz;
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
+	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 	GPIO_Init(GPIOB,&GPIO_InitStructure);
 	
 	GPIO_InitStructure.GPIO_Pin = (GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15);	
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
-	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_10MHz;
+	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 	GPIO_Init(GPIOB,&GPIO_InitStructure);
 	GPIO_ResetBits(GPIOB,GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15);
 	
+	DelayUs(100);
 	
 
-	if(GPIO_ReadInputDataBit(GPIOB,GPIO_Pin_10)==0)tmp=1;
-	if(GPIO_ReadInputDataBit(GPIOB,GPIO_Pin_11)==0)tmp=2;
-	if(GPIO_ReadInputDataBit(GPIOB,GPIO_Pin_12)==0)tmp=3;
+	if(GPIO_ReadInputDataBit(GPIOB,GPIO_Pin_10) == 0)tmp=1;
+	if(GPIO_ReadInputDataBit(GPIOB,GPIO_Pin_11) == 0)tmp=2;
+	if(GPIO_ReadInputDataBit(GPIOB,GPIO_Pin_12) == 0)tmp=3;
+	#endif
 	return tmp;
 }
 
@@ -145,11 +157,12 @@ uint8_t GetKey(void)
 	uint8_t r[2]={0};
 	uint8_t c[2]={0};
 	uint8_t i=0;
+	uint8_t k=0;
 
-	if(GetCol())//press
+	if(GetCol() != 0)//press
 	{
-		DelayMs(5);
-		if(GetRow())
+		DelayMs(10);
+		if(GetRow() != 0)
 		{
 			for(i=0;i<2;i++)
 			{
@@ -161,30 +174,33 @@ uint8_t GetKey(void)
 				c[i]=GetCol();
 				DelayUs(20);
 			}
-			if(r[0]==r[1] && c[0]==c[1])
+			if((r[0]==r[1]) && (c[0]==c[1]))
 			{
-				PortReset();
-				return ((c[0]-1)*3+r[0]);
+				
+				k = ((r[0]-1)*3+c[0]);
 			}
 			else 
 			{
-				return 0;
+				k = 200;
 			}
 		}
 		else
 		{
-			return 0;
+			k = 220;
 		}
 	}
 	else
 	{
-		return 0;
+		k = 230;
 	}
+	PortReset();
+	while(GetCol());  // press up 
 	
+	return k;
 }
 
 
-void EXTIB2_Isr(void)
+void EXTI_PA2_Isr(void)
 {
 	if(EXTI_GetITStatus(EXTI_Line2)) 
 		{
@@ -192,11 +208,11 @@ void EXTIB2_Isr(void)
 			
 			EXTI_ClearFlag(EXTI_Line2);  
 			EXTI_ClearITPendingBit(EXTI_Line2);
-			EXTI_PB2_Disable();
-			printf("IntGetKey:%d\r\n",GetKey());
-			EXTI_PB2_Enable();
-//			GetKey();
-			
+			EXTI_PA2_Disable();
+			gKey=GetKey();
+			printf("INT GET a Key %d ",gKey);
+			printf("enter exti---------------------------\r\n");
+			EXTI_PA2_Enable();	
 		} 
 }
 

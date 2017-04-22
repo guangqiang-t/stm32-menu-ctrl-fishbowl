@@ -40,7 +40,7 @@ void Timer3_Isr(void)
 			if(++Timer3Cnt == 5)//500ms
 			{
 				Timer3Cnt=0;
-				//menu_display();
+				menu_display();
 			}
 	}
 }

@@ -160,7 +160,7 @@ void TIM3_IRQHandler(void)
 
 void EXTI2_IRQHandler(void)
 {
-		EXTIB2_Isr();
+		EXTI_PA2_Isr();
 }
 
 /******************* (C) COPYRIGHT 2011 STMicroelectronics *****END OF FILE****/

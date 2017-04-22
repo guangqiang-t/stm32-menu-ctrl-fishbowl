@@ -11,6 +11,10 @@
 #include "IIC.h"
 #include "key.h"
 
+void assert_failed(uint8_t* file, uint32_t line)
+{
+	printf("Wrong parameters value: file %s on line %d\r\n", file, line);
+}
 
 int main (void)
 {
@@ -23,8 +27,7 @@ int main (void)
 	bh1750Config();
 	DelayMs(200);
 	printf("sys init ok \r\n");
-	//GPIO_SetBits(GPIOB,GPIO_Pin_6);
-//	KeyConfig();
+	KeyConfig();
 	
 	
 	while(1)
@@ -38,11 +41,12 @@ int main (void)
 		gui32BH1750Value=GetLight(pBH1750_RAW);
 		
 		printf("lig is %d\r\n ",gui32BH1750Value);
-		printf("GetKey:%d\r\n",GetKey());
+//		printf("GetKey:%d\r\n",GetKey());
+		if(gui32BH1750Value<100)gui32BH1750Value=100;
 		led_on();
-		DelayMs(100);
+		DelayMs(gui32BH1750Value);
 		led_off();
-		DelayMs(100);
+		DelayMs(gui32BH1750Value);
 //		LcdPrintInt(1,1,22);
 		
 	}

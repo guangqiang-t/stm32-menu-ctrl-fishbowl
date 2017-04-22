@@ -4,26 +4,13 @@
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
 C:\Users\admin\×ÀÃæ\ê«ºìÎ°\stm32\mdk\Project\STM32_Project.uvproj
-Project File Date:  04/20/2017
+Project File Date:  04/21/2017
 
 <h2>Output:</h2>
 Build target 'Template'
-compiling key.c...
-..\Driver\key.c(196): warning:  #223-D: function "printf" declared implicitly
+compiling main.c...
 linking...
-Program Size: Code=10768 RO-data=268 RW-data=180 ZI-data=1196  
-".\STM32_Project.axf" - 0 Errors, 1 Warning(s).
-Build target 'Template'
-linking...
-Program Size: Code=10768 RO-data=268 RW-data=180 ZI-data=1196  
-".\STM32_Project.axf" - 0 Errors, 0 Warning(s).
-Build target 'Template'
-linking...
-Program Size: Code=10768 RO-data=268 RW-data=180 ZI-data=1196  
-".\STM32_Project.axf" - 0 Errors, 0 Warning(s).
-Build target 'Template'
-linking...
-Program Size: Code=10768 RO-data=268 RW-data=180 ZI-data=1196  
+Program Size: Code=10788 RO-data=268 RW-data=184 ZI-data=1192  
 ".\STM32_Project.axf" - 0 Errors, 0 Warning(s).
 Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
 Erase Done.
@@ -33,7 +20,27 @@ Application running ...
 Build target 'Template'
 compiling main.c...
 linking...
-Program Size: Code=10764 RO-data=268 RW-data=180 ZI-data=1196  
+Program Size: Code=10804 RO-data=268 RW-data=184 ZI-data=1192  
+".\STM32_Project.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Template'
+compiling main.c...
+linking...
+Program Size: Code=10796 RO-data=268 RW-data=184 ZI-data=1192  
+".\STM32_Project.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Template'
+compiling main.c...
+linking...
+Program Size: Code=10804 RO-data=268 RW-data=184 ZI-data=1192  
 ".\STM32_Project.axf" - 0 Errors, 0 Warning(s).
 Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
 Erase Done.
