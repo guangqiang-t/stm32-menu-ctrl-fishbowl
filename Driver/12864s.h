@@ -27,6 +27,10 @@ void LcdInit(void);
 void LcdAddressSet(unsigned char x,unsigned char y);
 void LcdPrintString(unsigned char x,unsigned char y,unsigned char *string);
 void LcdPrintChar(unsigned char x,unsigned char y,unsigned char num);
+#if 0
 void LcdPrintInt(unsigned char x,unsigned char y,unsigned int num);
+#else
+void LcdPrintInt(unsigned char x,unsigned char y,int num);
+#endif
 
 #endif /* _12864s_H_ */

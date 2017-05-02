@@ -93,6 +93,7 @@ void lcdPrintChar(unsigned char x,unsigned char y,unsigned char num)
   LcdWriteData(num%10+'0');
 }
 
+#if 0
 void LcdPrintInt(unsigned char x,unsigned char y,unsigned int num)
 {
   unsigned char n[5]={"00000"},i;
@@ -108,5 +109,60 @@ void LcdPrintInt(unsigned char x,unsigned char y,unsigned int num)
     LcdWriteData(n[i]);
    }
 }
+
+#else
+void LcdPrintInt(unsigned char x,unsigned char y, int num)
+{
+	
+	uint8_t flag=0;// first no-zero flag
+	uint8_t i=0;
+	uint8_t n[8]={"0000000\0"};
+	LcdPrintString(x,y,(unsigned char *)"         ");
+	LcdAddressSet(x,y);
+	if(num == 0)// num is 0
+	{
+		LcdPrintString(x,y,(unsigned char *)"0        ");
+		return;
+	}
+	if(num > INT32_MAX )
+	{
+		LcdPrintString(x,y,(unsigned char *)"ovfw\0");
+	}
+	else if(num < 0)//negtive
+	{
+		LcdWriteData('-');
+		num=-num;
+	}
+	
+	for(i = 0;i < 7;i++)//-99999999--->99999999
+	{		
+		n[6-i]=num%10+'0';
+		num/=10;
+	}
+
+	
+	for(i = 0;i < 7;i++)
+	{	
+		if(!flag)
+		{			
+			if(n[i] == '0')
+			{
+				continue;
+			}
+			else
+			{	
+				flag=1;
+				LcdWriteData(n[i]);
+			}
+		}
+		else
+		{
+			LcdWriteData(n[i]);
+		}
+	}
+}
+
+#endif
+
 
 

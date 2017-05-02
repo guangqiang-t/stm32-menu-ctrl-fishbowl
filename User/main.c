@@ -2,7 +2,7 @@
 #include "stm32f10x_it.h"
 #include "delay.h"
 #include "USART.h"
-#include "LED.h"
+ #include "LED.h"
 #include "12864s.h"
 #include "DS1302.h"
 #include "menu.h"
@@ -10,6 +10,7 @@
 #include "bh1750.h"
 #include "IIC.h"
 #include "key.h"
+#include "DS18B20.h"
 
 void assert_failed(uint8_t* file, uint32_t line)
 {
@@ -18,18 +19,21 @@ void assert_failed(uint8_t* file, uint32_t line)
 
 int main (void)
 {
+	int tmp=0;
+	
 	led_config();
 	USART1_Config();
-//	LcdInit();
+	LcdInit();
 	menu_all_config();
 	NVIC_Config();
-	Timer3Config(100);
+	Ds1302Init(0);
+//	Timer3Config(180);
 	bh1750Config();
-	DelayMs(200);
+	ds18b20_start();
 	printf("sys init ok \r\n");
 	KeyConfig();
 	
-	
+	DelayMs(100);
 	while(1)
 
 	{
@@ -40,14 +44,29 @@ int main (void)
 		bh1750ReadBuff(pBH1750_RAW);
 		gui32BH1750Value=GetLight(pBH1750_RAW);
 		
+		Ds1302ReadTime();
+		TimeConvertToString();
+		printf("Now Date is :%s-%s\r\n",YearString,TimeString);
+		
 		printf("lig is %d\r\n ",gui32BH1750Value);
-//		printf("GetKey:%d\r\n",GetKey());
-		if(gui32BH1750Value<100)gui32BH1750Value=100;
+		printf("GetKey:%d\r\n",GetKey());
+		
+		//if(gui32BH1750Value<50)gui32BH1750Value=100;
 		led_on();
-		DelayMs(gui32BH1750Value);
+		DelayMs(300);
 		led_off();
-		DelayMs(gui32BH1750Value);
-//		LcdPrintInt(1,1,22);
+		
+		tmp=ds18b20_read();
+		// ds18b20test();
+		
+		DelayMs(600);
+		Ds1302ReadTime();
+		TimeConvertToString();
+		LcdPrintString(1,1,YearString);
+		LcdPrintString(2,1,TimeString);
+		LcdPrintInt(3,1,gui32BH1750Value);
+		LcdPrintInt(4,1,tmp);
+		
 		
 	}
 	

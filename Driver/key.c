@@ -12,6 +12,7 @@ void KeyConfig(void)
 	
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);//a2 INT0
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE);
+//	RCC_APB2PeriphClockCmd(RCC_APB2Periph_AFIO,ENABLE);
 	
 	GPIO_InitStructure.GPIO_Pin = (GPIO_Pin_10|GPIO_Pin_11|GPIO_Pin_12);//k1--k6  PB10-->PB15
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;
@@ -30,6 +31,7 @@ void KeyConfig(void)
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPD; 
 	GPIO_Init(GPIOA, &GPIO_InitStructure);
 	
+	#if 0
 	EXTI_DeInit();
 	
 	GPIO_EXTILineConfig(GPIO_PortSourceGPIOA, GPIO_PinSource2);
@@ -41,10 +43,11 @@ void KeyConfig(void)
 	EXTI_PA2_Enable();
 	
 	NVIC_InitStructure.NVIC_IRQChannel = EXTI2_IRQn;
-	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 4;
-	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 1;
+	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;
+	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 2;
 	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
 	NVIC_Init(&NVIC_InitStructure);
+	#endif
 	
 }
 
@@ -66,7 +69,7 @@ void PortReset(void)
 
 void EXTI_PA2_Enable(void)
 {
-	#if 0
+	#if 1
 	EXTI_InitTypeDef EXTI_InitStructure;
 	
 	GPIO_EXTILineConfig(GPIO_PortSourceGPIOA, GPIO_PinSource2);
@@ -84,7 +87,7 @@ void EXTI_PA2_Enable(void)
 
 void EXTI_PA2_Disable(void)
 {
-	#if 0
+	#if 1
 	EXTI_InitTypeDef EXTI_InitStructure;
 	
 	EXTI_DeInit();
@@ -116,7 +119,7 @@ uint8_t GetRow(void)
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 	GPIO_Init(GPIOB,&GPIO_InitStructure);
 
-	DelayUs(100);
+	//DelayUs(100);
 	
 	if(GPIO_ReadInputDataBit(GPIOB,GPIO_Pin_13)==0)tmp=1;
 	if(GPIO_ReadInputDataBit(GPIOB,GPIO_Pin_14)==0)tmp=2;
@@ -129,10 +132,10 @@ uint8_t GetRow(void)
 uint8_t GetCol(void)
 {
 	uint8_t tmp=0;
-	#if 0
+	#if 1
 	GPIO_InitTypeDef GPIO_InitStructure;
 	GPIO_InitStructure.GPIO_Pin = (GPIO_Pin_10|GPIO_Pin_11|GPIO_Pin_12);
-	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 	GPIO_Init(GPIOB,&GPIO_InitStructure);
 	
@@ -142,7 +145,7 @@ uint8_t GetCol(void)
 	GPIO_Init(GPIOB,&GPIO_InitStructure);
 	GPIO_ResetBits(GPIOB,GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15);
 	
-	DelayUs(100);
+	//DelayUs(100);
 	
 
 	if(GPIO_ReadInputDataBit(GPIOB,GPIO_Pin_10) == 0)tmp=1;
@@ -161,7 +164,7 @@ uint8_t GetKey(void)
 
 	if(GetCol() != 0)//press
 	{
-		DelayMs(10);
+		DelayMs(20);
 		if(GetRow() != 0)
 		{
 			for(i=0;i<2;i++)
@@ -181,21 +184,21 @@ uint8_t GetKey(void)
 			}
 			else 
 			{
-				k = 200;
+				k = 253;
 			}
 		}
 		else
 		{
-			k = 220;
+			k = 254;
 		}
 	}
 	else
 	{
-		k = 230;
+		k = 255;
 	}
-	PortReset();
+
 	while(GetCol());  // press up 
-	
+	PortReset();
 	return k;
 }
 
@@ -204,16 +207,18 @@ void EXTI_PA2_Isr(void)
 {
 	if(EXTI_GetITStatus(EXTI_Line2)) 
 		{
-			
-			
+		
 			EXTI_ClearFlag(EXTI_Line2);  
 			EXTI_ClearITPendingBit(EXTI_Line2);
 			EXTI_PA2_Disable();
 			gKey=GetKey();
-			printf("INT GET a Key %d ",gKey);
-			printf("enter exti---------------------------\r\n");
+			printf("enter exti---------------------------INT GET a Key %d\r\n",gKey);
 			EXTI_PA2_Enable();	
 		} 
+		else
+		{
+			printf("int err\r\n");
+		}
 }
 
 

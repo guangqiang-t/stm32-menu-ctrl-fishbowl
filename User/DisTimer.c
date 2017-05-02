@@ -1,6 +1,7 @@
 #include "DisTimer.h"
 #include "menu.h"
-
+#include "DS1302.h"
+#include "12864s.h"
 
 void Timer3Config(uint16_t nms)//max 260   65535/250 000=0.26214
 {
@@ -41,6 +42,10 @@ void Timer3_Isr(void)
 			{
 				Timer3Cnt=0;
 				menu_display();
+				Ds1302ReadTime();
+				TimeConvertToString();
+				LcdPrintString(1,1,YearString);
+				LcdPrintString(2,1,TimeString);
 			}
 	}
 }

@@ -17,6 +17,7 @@
 ".\iic.o"
 ".\bh1750.o"
 ".\key.o"
+".\ds18b20.o"
 ".\main.o"
 ".\led.o"
 ".\menu.o"

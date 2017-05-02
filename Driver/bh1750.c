@@ -29,7 +29,7 @@ void bh1750Start(void)
 	bh1750WriteByte(BH1750_RSET);
 	DelayUs(1);
 	bh1750WriteByte(BH1750_ONE);
-	DelayMs(150);
+	DelayMs(180);
 }
 
 void bh1750WriteByte(uint8_t dat)
