@@ -17,7 +17,10 @@ typedef struct
 	void *next_menu;
 }menuNODE;
 
+
 typedef menuNODE menu_list;
+
+enum keyvalue{KEY_INC=1,KEY_DEC,KEY_PAGE_DOWN,KEY_OK,KEY_INC_TEMP,KEY_EXCHEANGE_WATER,KEY_LOOP,KEY_OXY,KEY_LIGHT};
 
 extern menu_list *g_menu;//global
 extern void menu_init(menu_list *m,\
@@ -36,6 +39,9 @@ extern void menu_display(void);
 extern void menu_lock(menu_list *p);
 extern void menu_unlock(menu_list *p);
 extern int32_t  menu_set_val(menu_list *p,int32_t v);
+void menu_display(void);
+void dis_time(void);
+void __handle_key(void);
 
 
 #endif //_menu_H_

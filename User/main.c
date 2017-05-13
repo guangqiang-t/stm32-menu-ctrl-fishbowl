@@ -14,6 +14,8 @@
 #include "pwm.h"
 #include "relay.h"
 
+
+
 void assert_failed(uint8_t* file, uint32_t line)
 {
 	printf("Wrong parameters value: file %s on line %d\r\n", file, line);
@@ -21,7 +23,7 @@ void assert_failed(uint8_t* file, uint32_t line)
 
 int main (void)
 {
-	
+//	uint8_t k=0;
 	led_config();
 	USART1_Config();
 	LcdInit();
@@ -38,40 +40,20 @@ int main (void)
 	
 	RelayConfig();
 
-	ChangeRelayStatus(chongyang,NO);
+	ChangeRelayStatus(jiawen,NO);
 	
 	DelayMs(100);
 	while(1)
 
 	{
 		
-		menu_page_down();
-		
-		bh1750Start();
-		bh1750ReadBuff(pBH1750_RAW);
-		g_Light=GetLight(pBH1750_RAW);
-		
-		Ds1302ReadTime();
-		TimeConvertToString();
-		printf("Now Date is :%s-%s\r\n",YearString,TimeString);
-		
-		printf("lig is %d\r\n ",g_Light);
-		printf("GetKey:%d\r\n",GetKey());
-		
+
 		led_on();
 		DelayMs(100);
 		led_off();
 		
-		GetTemp();
-		
-		DelayMs(600);
-		Ds1302ReadTime();
-		TimeConvertToString();
-		LcdPrintString(1,1,YearString);
-		LcdPrintTemp(3,1,g_Temp[0]);
-		LcdPrintTemp(3,6,g_Temp[1]);
-		LcdPrintString(2,1,TimeString);
-		LcdPrintInt(4,1,g_Light);
+		__handle_key();
+		menu_display();
 		
 		if(g_Light >= 100)g_Light=100;
 		sync_pwm((100-g_Light)/2);

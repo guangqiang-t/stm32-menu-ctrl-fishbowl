@@ -116,32 +116,33 @@ void LcdPrintInt(unsigned char x,unsigned char y, int num)
 	
 	uint8_t flag=0;// first no-zero flag
 	uint8_t i=0;
-	uint8_t n[8]={"0000000\0"};
-	LcdPrintString(x,y,(unsigned char *)"         ");
+	uint8_t n[6]={"00000\0"};
+	LcdPrintString(x,y,(unsigned char *)"       ");
 	LcdAddressSet(x,y);
 	if(num == 0)// num is 0
 	{
-		LcdPrintString(x,y,(unsigned char *)"0        ");
+		LcdPrintString(x,y,(unsigned char *)"0      ");
 		return;
 	}
-	if(num > INT32_MAX )
-	{
-		LcdPrintString(x,y,(unsigned char *)"ovfw\0");
-	}
-	else if(num < 0)//negtive
+	if(num < 0)//negtive
 	{
 		LcdWriteData('-');
 		num=-num;
 	}
+	if(num > 99999 )
+	{
+		LcdPrintString(x,y,(unsigned char *)"ovfw\0");
+		return ;
+	}
 	
-	for(i = 0;i < 7;i++)//-99999999--->99999999
+	for(i = 0;i < 5;i++)//--99999--->99999
 	{		
-		n[6-i]=num%10+'0';
+		n[4-i]=num%10+'0';
 		num/=10;
 	}
 
 	
-	for(i = 0;i < 7;i++)
+	for(i = 0;i < 5;i++)
 	{	
 		if(!flag)
 		{			
@@ -173,6 +174,13 @@ void LcdPrintTemp(unsigned char x,unsigned char y,unsigned short t)
 	LcdWriteData('.');
   LcdWriteData(t%10+'0');
 	LcdWriteData('C');
+}
+
+void LcdPrintlight(unsigned char x,unsigned char y,unsigned short t)
+{
+	LcdPrintInt(x,y,t);
+	LcdWriteData('L');
+	LcdWriteData('x');
 }
 
 
