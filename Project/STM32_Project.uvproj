@@ -507,6 +507,16 @@
               <FileType>1</FileType>
               <FilePath>..\Driver\DS18B20.c</FilePath>
             </File>
+            <File>
+              <FileName>pwm.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Driver\pwm.c</FilePath>
+            </File>
+            <File>
+              <FileName>relay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Driver\relay.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

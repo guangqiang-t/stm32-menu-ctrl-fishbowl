@@ -1,10 +1,5 @@
 
 
-//============================================
-//      DS18B20.H
-
-//============================================
-
 #ifndef __DS18B20_H
 #define __DS18B20_H
 
@@ -21,10 +16,13 @@
 #define  RecallEEPROM    0xB8    //将EEPROM的温度告警复制到暂存器中，复制期间输出0，复制完成后输出1
 #define  ReadPower       0xB4    //读电源的供电方式：0为寄生电源供电；1为外部电源供电
 
+extern unsigned short g_Temp[2];
 
 void ds18b20test(void);
 void ds18b20_start(void);
-unsigned short ds18b20_read(void);
-
+unsigned short ds18b20_read(unsigned char index);
+void PrintSeries(unsigned char *p);
+void DS18B20SendSeries(unsigned char *addr);
+void GetTemp(void);
 
 #endif

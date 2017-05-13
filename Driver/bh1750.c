@@ -15,7 +15,7 @@ addr=0 0100011
 */
 
 uint8_t  pBH1750_RAW[2]={0};
-uint32_t gui32BH1750Value=0;
+uint32_t g_Light=0;
 
 void bh1750Config(void)
 {

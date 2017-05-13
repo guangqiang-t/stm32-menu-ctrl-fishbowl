@@ -5,7 +5,7 @@
 #include "stm32f10x.h"
 
 extern  uint8_t pBH1750_RAW[2];
-extern uint32_t gui32BH1750Value;
+extern uint32_t g_Light;
 
 void bh1750Config(void);
 void bh1750Start(void);

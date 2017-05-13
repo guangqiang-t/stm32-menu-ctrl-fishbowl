@@ -18,6 +18,8 @@
 ".\bh1750.o"
 ".\key.o"
 ".\ds18b20.o"
+".\pwm.o"
+".\relay.o"
 ".\main.o"
 ".\led.o"
 ".\menu.o"

@@ -32,5 +32,6 @@ void LcdPrintInt(unsigned char x,unsigned char y,unsigned int num);
 #else
 void LcdPrintInt(unsigned char x,unsigned char y,int num);
 #endif
+void LcdPrintTemp(unsigned char x,unsigned char y,unsigned short t);
 
 #endif /* _12864s_H_ */

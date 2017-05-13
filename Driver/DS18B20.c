@@ -1,13 +1,9 @@
-//========================================================
 
-//        DS18B20.C    By ligh
-
-//========================================================
 
 #include "stm32f10x.h"
 #include "DS18B20.h"
 #include "delay.h"
-
+#include "stdio.h"
  
 
 #define EnableINT()  
@@ -27,8 +23,11 @@
 #define SetDQ()  GPIO_SetBits(DS_PORT,DS_DQIO)
 #define GetDQ()  GPIO_ReadInputDataBit(DS_PORT,DS_DQIO)
  
+#define USE_SERIES
  
 static unsigned char TempX_TAB[16]={0x00,0x01,0x01,0x02,0x03,0x03,0x04,0x04,0x05,0x06,0x06,0x07,0x08,0x08,0x09,0x09};
+const  unsigned char Series[2][8]={{0x28,0xFf,0x36,0xA9,0x8A,0x16,0x03,0xC6},{0x28,0xFF,0x78,0xAF,0xA1,0x16,0x04,0x52}};
+unsigned short g_Temp[2]={0,0};
 
 void ds18b20test(void)
 {
@@ -117,6 +116,8 @@ void DS18B20Init(unsigned char Precision,unsigned char AlarmTH,unsigned char Ala
 {
  DisableINT();
  ResetDS18B20();
+ //ReadRom((unsigned char *)Series[0]);
+
  DS18B20WriteByte(SkipROM); 
  DS18B20WriteByte(WriteScratchpad);
  DS18B20WriteByte(AlarmTL);
@@ -159,17 +160,23 @@ void ds18b20_start(void)
  DS18B20_Configuration();
  DS18B20Init(DS_PRECISION, DS_AlarmTH, DS_AlarmTL);
  DS18B20StartConvert();
+ PrintSeries((unsigned char *)Series[0]);
 }
 
 
-unsigned short ds18b20_read(void)
+unsigned short ds18b20_read(unsigned char index)
 {
  unsigned char TemperatureL,TemperatureH;
  unsigned int  Temperature;
 
  DisableINT();
  ResetDS18B20();
- DS18B20WriteByte(SkipROM); 
+ #ifdef USE_SERIES
+	DS18B20WriteByte(MatchROM);
+	DS18B20SendSeries((unsigned char *)Series[index]);
+ #else
+	 DS18B20WriteByte(SkipROM); 
+ #endif
  DS18B20WriteByte(ReadScratchpad);
  TemperatureL=DS18B20ReadByte();
  TemperatureH=DS18B20ReadByte(); 
@@ -194,5 +201,32 @@ unsigned short ds18b20_read(void)
  DS18B20StartConvert();
 
  return  Temperature;
+
+}
+
+void PrintSeries(unsigned char *p)
+{
+	unsigned char i=0;
+	printf("Series is \r\n");
+	for(i=0;i<8;i++)
+	{
+		printf("#%x",*p++);
+	}
+	printf("\r\n");
+}
+
+void DS18B20SendSeries(unsigned char *addr)
+{
+	unsigned char i=0;
+	for(i=0;i<8;i++)
+	{
+		DS18B20WriteByte(*addr++);
+	}
+}
+
+void GetTemp(void)
+{
+	g_Temp[0]=(ds18b20_read(0)-2800)/17;
+	g_Temp[1]=(ds18b20_read(1)-2800)/17;
 }
 

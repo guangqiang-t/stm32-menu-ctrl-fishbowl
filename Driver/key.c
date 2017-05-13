@@ -7,8 +7,10 @@ volatile  uint8_t gKey=0;
 void KeyConfig(void)
 {
 	GPIO_InitTypeDef GPIO_InitStructure;
+	#if 0
 	EXTI_InitTypeDef EXTI_InitStructure;
 	NVIC_InitTypeDef NVIC_InitStructure;
+	#endif 
 	
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);//a2 INT0
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE);
@@ -184,12 +186,12 @@ uint8_t GetKey(void)
 			}
 			else 
 			{
-				k = 253;
+				k = 255;
 			}
 		}
 		else
 		{
-			k = 254;
+			k = 255;
 		}
 	}
 	else

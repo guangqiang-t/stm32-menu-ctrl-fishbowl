@@ -165,4 +165,15 @@ void LcdPrintInt(unsigned char x,unsigned char y, int num)
 #endif
 
 
+void LcdPrintTemp(unsigned char x,unsigned char y,unsigned short t)
+{
+	LcdAddressSet(x,y);
+	LcdWriteData(t/100+'0');
+  LcdWriteData(t/10%10+'0');
+	LcdWriteData('.');
+  LcdWriteData(t%10+'0');
+	LcdWriteData('C');
+}
+
+
 
