@@ -5,6 +5,7 @@
 extern unsigned char TIME[7];	//加入全局变量
 extern unsigned char YearString[];
 extern unsigned char TimeString[];
+extern volatile unsigned char TimeRaw;
 
 void DS1302_Config(void);
 void Ds1302Write(unsigned char addr, unsigned char dat);

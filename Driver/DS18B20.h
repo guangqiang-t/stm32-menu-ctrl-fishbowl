@@ -1,5 +1,3 @@
-
-
 #ifndef __DS18B20_H
 #define __DS18B20_H
 
@@ -17,6 +15,7 @@
 #define  ReadPower       0xB4    //读电源的供电方式：0为寄生电源供电；1为外部电源供电
 
 extern unsigned short g_Temp[2];
+extern unsigned short g_TempMin,g_TempMax;
 
 void ds18b20test(void);
 void ds18b20_start(void);

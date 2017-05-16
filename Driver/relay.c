@@ -71,6 +71,18 @@ void ChangeRelayStatus(ClassRelay index,RelayStatus s)
 			}
 			break;
 		}
+		case (paishui):
+		{
+			if(s)
+			{
+				GPIO_ResetBits(GPIOA,GPIO_Pin_12);
+			}
+			else
+			{
+				GPIO_SetBits(GPIOA,GPIO_Pin_12);
+			}
+			break;
+		}
 		
 		#endif 
 		default:break;

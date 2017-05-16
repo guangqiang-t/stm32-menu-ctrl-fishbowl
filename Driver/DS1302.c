@@ -12,6 +12,7 @@ unsigned char  WRITE_RTC_ADDR[7] = {0x80, 0x82, 0x84, 0x86, 0x88, 0x8a, 0x8c};
 //---存储顺序是秒分时日月周年,存储格式是用BCD码---//
 unsigned char TIME[7] = {0, 0x33, 0x23, 0x22, 0x04, 0x02, 0x17};
 
+volatile unsigned char TimeRaw=0;
 unsigned char YearString[11]={"2017-04-22\0"};
 unsigned char TimeString[9]={"23-34-00\0"};
 
@@ -222,6 +223,8 @@ void Ds1302ReadTime(void)
 
 void TimeConvertToString(void)
 {
+	TimeRaw=(TIME[2]/16)*10 + (TIME[2]&0x0F);
+	
 	TimeString[0]='0'+(TIME[2]/16);//h
 	TimeString[1]='0'+(TIME[2]&0x0f);
 	

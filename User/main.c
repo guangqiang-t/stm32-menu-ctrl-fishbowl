@@ -13,6 +13,7 @@
 #include "DS18B20.h"
 #include "pwm.h"
 #include "relay.h"
+#include "task.h"
 
 
 
@@ -40,23 +41,23 @@ int main (void)
 	
 	RelayConfig();
 
-	ChangeRelayStatus(jiawen,NO);
+	//water_exchange_config();
+	//ChangeRelayStatus(jiawen,NO);
 	
-	DelayMs(100);
+	DelayMs(200);
 	while(1)
 
 	{
 		
-
+		//get_low_water();
 		led_on();
-		DelayMs(100);
+		DelayMs(1000);
 		led_off();
-		
+		water_exchange(stask_start);
 		__handle_key();
 		menu_display();
+		__handle_operate();
 		
-		if(g_Light >= 100)g_Light=100;
-		sync_pwm((100-g_Light)/2);
 		
 	}
 	

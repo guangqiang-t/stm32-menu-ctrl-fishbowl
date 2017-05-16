@@ -7,8 +7,13 @@ void LcdIoInit(void)
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE);
 	GPIO_InitStructure.GPIO_Pin = SCLK|SDATA;
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
-	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_10MHz;
+	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 	GPIO_Init(GPIOB,&GPIO_InitStructure);
+}
+
+static volatile void LcdDelay(volatile unsigned short t)
+{
+	while(t--);
 }
 
 void LcdSendByte(unsigned char byte)
@@ -21,7 +26,10 @@ void LcdSendByte(unsigned char byte)
       SDATA_SET;
     else
       SDATA_CLR;
+		LcdDelay(3);
+		
   SCLK_SET;
+	LcdDelay(3);
   SCLK_CLR;
   byte=(byte<<1);
   }
@@ -76,12 +84,12 @@ void LcdAddressSet(unsigned char x,unsigned char y)
   LcdWriteCmd(row+y-1);
 }
 
-void LcdPrintString(unsigned char x,unsigned char y,unsigned char *string)
+void LcdPrintString(unsigned char x,unsigned char y,char *string)
 {
   LcdAddressSet(x,y);
   while(*string)
   {
-    LcdWriteData(*string++);
+    LcdWriteData((unsigned char )*string++);
   }
 }
 
@@ -121,7 +129,7 @@ void LcdPrintInt(unsigned char x,unsigned char y, int num)
 	LcdAddressSet(x,y);
 	if(num == 0)// num is 0
 	{
-		LcdPrintString(x,y,(unsigned char *)"0      ");
+		LcdPrintString(x,y,(unsigned char *)"0");
 		return;
 	}
 	if(num < 0)//negtive

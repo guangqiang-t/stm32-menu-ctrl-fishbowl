@@ -25,7 +25,7 @@ void LcdWriteCmd(unsigned char cmd);
 void LcdWriteData(unsigned char data);
 void LcdInit(void);
 void LcdAddressSet(unsigned char x,unsigned char y);
-void LcdPrintString(unsigned char x,unsigned char y,unsigned char *string);
+void LcdPrintString(unsigned char x,unsigned char y,char *string);
 void LcdPrintChar(unsigned char x,unsigned char y,unsigned char num);
 #if 0
 void LcdPrintInt(unsigned char x,unsigned char y,unsigned int num);

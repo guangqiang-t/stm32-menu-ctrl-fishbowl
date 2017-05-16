@@ -4,6 +4,7 @@
 #include "bh1750.h"
 #include "DS18B20.h"
 #include "key.h"
+#include "pwm.h"
 
 #define LOCKED (1)
 #define UNLOCKED (0)
@@ -11,15 +12,20 @@
 
 menu_list m[6];//all menu list strust 
 menu_list *g_menu=m;
-uint8_t m_name[7][16]={"光照","温度","换水","灯光","充氧","循环"};
-uint8_t  null[]="NULL";// null pointer to this 
-uint8_t _IsON[]="ON";
-uint8_t _IsOFF[]="OFF";
+int8_t m_name[7][16]={"光照","温度","换水","灯光","充氧","循环"};
+int8_t  null[]="NULL";// null pointer to this 
+int8_t _IsON[]="ON";
+int8_t _IsOFF[]="OFF        ";
 uint8_t ext[]="2102";//just for  test]
 uint8_t g_current_key=0;
-uint8_t r_guangzhao[3]={0,8,19};
-uint8_t r_wendu[3]={0,8,16};
-uint8_t r_huanshui[2]={0,1};
+
+uint8_t r_guangzhao[3]={0,8,22};//enable start stop
+uint8_t r_wendu[3]={0,8,30};
+
+uint8_t r_huanshui[2]={0,1};//3
+//uint8_t r_dengguang[3]={0,20};
+uint8_t r_chongyang[5]={0,1};//5
+uint8_t r_xunhuan[2]={0,1};//6
 
 uint8_t g_menu_nest=0;
 
@@ -35,7 +41,7 @@ void menu_init(menu_list *m,\
 				uint8_t id,\
 				void *pre,\
 				uint8_t lock,\
-				uint8_t *nam,\
+				int8_t *nam,\
 				int32_t value,\
 				void *ext_data,\
 				void *next)
@@ -55,9 +61,9 @@ void menu_all_config(void)
 	menu_init(&m[0],1,&m[5],0,m_name[0],1,r_guangzhao,&m[1]);
 	menu_init(&m[1],2,&m[0],0,m_name[1],2,r_wendu,&m[2]);
 	menu_init(&m[2],3,&m[1],0,m_name[2],3,r_huanshui,&m[3]);
-	menu_init(&m[3],4,&m[2],0,m_name[3],4,_IsOFF,&m[4]);
-	menu_init(&m[4],5,&m[3],0,m_name[4],5,_IsOFF,&m[5]);
-	menu_init(&m[5],6,&m[4],0,m_name[5],6,_IsOFF,&m[0]);
+	menu_init(&m[3],4,&m[2],0,m_name[3],0,NULL,&m[4]);
+	menu_init(&m[4],5,&m[3],0,m_name[4],5,r_chongyang,&m[5]);
+	menu_init(&m[5],6,&m[4],0,m_name[5],6,r_xunhuan,&m[0]);
 	//g_menu=&m[1];
 }
 
@@ -98,7 +104,7 @@ void menu_display(void)
 {
 	
 	//menu_dis_get_value();
-	printf("%d:%s-%d-ext-%s\r\n",g_menu->id,g_menu->name,g_menu->val,(uint8_t *)(g_menu->ext_data));
+	//printf("%d:%s-%d-ext-%s\r\n",g_menu->id,g_menu->name,g_menu->val,(uint8_t *)(g_menu->ext_data));
 	
 	LcdPrintString(1,1,g_menu->name);
   dis_time();
@@ -151,11 +157,11 @@ void __handle_key(void)
 				menu_page_down();
 		}
 		
-	else if(g_current_key== KEY_OK)
+	else if(g_current_key== KEY_OK)//ok
 	{
 		
 		g_current_key=0;
-		if(g_menu_nest == 0)
+		if( g_menu_nest== 0)
 		{
 			g_menu_nest++;
 			printf("key ok nest %d \r\n",g_menu_nest);
@@ -166,38 +172,66 @@ void __handle_key(void)
 				{
 					case (1):
 					{
-						(*((uint8_t *)(g_menu->ext_data)+0)) = ~(*((uint8_t *)(g_menu->ext_data)+0));
-						printf("guangzhao ON/OFF\r\n");
+						if((*((uint8_t *)(g_menu->ext_data)+0)) == 0)
+						{
+							*(((uint8_t *)(g_menu->ext_data) + 0))=1;//open 
+							m[3].val = 1;
+						}
+						else
+						{
+							*(((uint8_t *)(g_menu->ext_data) + 0))=0;//close
+							m[3].val = 0;
+						}
+						printf("1 ON/OFF shift \r\n");
 						break;
 					}
-					
 					case (2):
-					{
-						(*((uint8_t *)(g_menu->ext_data)+0)) = ~(*((uint8_t *)(g_menu->ext_data)+0));
-						printf("temp ON/OFF\r\n");
-						break;
-					}
 					case (3):
+					case (5):
+					case (6):
 					{
-						(*((uint8_t *)(g_menu->ext_data)+0)) = ~(*((uint8_t *)(g_menu->ext_data)+0));
-						printf("exchange water ON/OFF\r\n");
+						if((*((uint8_t *)(g_menu->ext_data)+0)) == 0)
+						{
+							*(((uint8_t *)(g_menu->ext_data) + 0))=1;//open 
+						}
+						else
+						{
+							*(((uint8_t *)(g_menu->ext_data) + 0))=0;//close
+						}
+						printf("2,3,5,6 ON/OFF shift \r\n");
 						break;
 					}
 					
+					case (4):
+					{
+						if(g_menu->val ==0)
+						{
+							g_menu->val = 1;
+							r_guangzhao[0] = 1;//open
+						}
+						else
+						{
+							g_menu->val = 0;
+							r_guangzhao[0] = 0;//close 
+						}
+						
+						printf("g-val is %d\r\n",g_menu->val);
+						break;
+					}
 					
 					default :break;
 				}
 		}
 	}
 	
-	else if(g_current_key== KEY_INC)
+	else if(g_current_key== KEY_INC)//+1
 	{
 		g_current_key=0;
 		switch(g_menu->id)
 				{
 					case (1):
 					{
-						if((*((uint8_t *)(g_menu->ext_data)+0)) == 0)
+						if((*((uint8_t *)(g_menu->ext_data)+0)) != 0)
 						{
 								(*((uint8_t *)(g_menu->ext_data)+1))++;
 								if((*((uint8_t *)(g_menu->ext_data)+1)) == 24)(*((uint8_t *)(g_menu->ext_data)+1)) =0;
@@ -207,7 +241,7 @@ void __handle_key(void)
 					}
 					case (2):
 					{
-						if((*((uint8_t *)(g_menu->ext_data)+0)) == 0)
+						if((*((uint8_t *)(g_menu->ext_data)+0)) != 0)
 						{
 								(*((uint8_t *)(g_menu->ext_data)+1))++;
 								if((*((uint8_t *)(g_menu->ext_data)+1)) > 15)(*((uint8_t *)(g_menu->ext_data)+1)) =15;
@@ -217,8 +251,10 @@ void __handle_key(void)
 					}
 					
 					case (3):
+					case (5):
+					case (6):
 					{
-						if((*((uint8_t *)(g_menu->ext_data)+0)) == 0)
+						if((*((uint8_t *)(g_menu->ext_data)+0)) != 0)
 						{
 								(*((uint8_t *)(g_menu->ext_data)+1))++;
 								if((*((uint8_t *)(g_menu->ext_data)+1)) > 12)(*((uint8_t *)(g_menu->ext_data)+1)) =12;
@@ -230,14 +266,14 @@ void __handle_key(void)
 				}
 	}
 	
-		else if(g_current_key== KEY_DEC)
+		else if(g_current_key == KEY_DEC)//-1
 	{
 		g_current_key=0;
 		switch(g_menu->id)
 				{
 					case (1):
 					{
-						if((*((uint8_t *)(g_menu->ext_data)+0)) == 0)
+						if((*((uint8_t *)(g_menu->ext_data)+0)) != 0)
 						{
 								if((*((uint8_t *)(g_menu->ext_data)+1)) == 0)(*((uint8_t *)(g_menu->ext_data)+1)) =24;
 								(*((uint8_t *)(g_menu->ext_data)+1))--;
@@ -247,7 +283,7 @@ void __handle_key(void)
 					}
 					case (2):
 					{
-						if((*((uint8_t *)(g_menu->ext_data)+0)) == 0)
+						if((*((uint8_t *)(g_menu->ext_data)+0)) != 0)
 						{
 								(*((uint8_t *)(g_menu->ext_data)+1))--;
 								if((*((uint8_t *)(g_menu->ext_data)+1)) < 5)(*((uint8_t *)(g_menu->ext_data)+1)) =5;
@@ -256,8 +292,10 @@ void __handle_key(void)
 						break;
 					}
 					case (3):
+					case (5):
+					case (6):
 					{
-						if((*((uint8_t *)(g_menu->ext_data)+0)) == 0)
+						if((*((uint8_t *)(g_menu->ext_data)+0)) != 0)
 						{
 								(*((uint8_t *)(g_menu->ext_data)+1))--;
 								if((*((uint8_t *)(g_menu->ext_data)+1)) <=1 )(*((uint8_t *)(g_menu->ext_data)+1)) =1;
@@ -266,72 +304,108 @@ void __handle_key(void)
 						break;
 					}
 					
+					
+					
 					default :break;
 				}
+	}
+	
+	else if(g_current_key == KEY_INC_TEMP)
+	{
+		g_menu_nest = 0;
+		g_current_key=0;
+		g_menu=&m[1];
+	}
+	else if(g_current_key == KEY_EXCHEANGE_WATER)
+	{
+		g_menu_nest = 0;
+		g_current_key=0;
+		g_menu=&m[2];
+	}
+	else if(g_current_key == KEY_LIGHT)
+	{
+		g_menu_nest = 0;
+		g_current_key=0;
+		g_menu=&m[3];
 	}
 	
 	else if(g_current_key== KEY_LOOP)
 	{
-		g_current_key=0;
-		switch(g_menu->id)
-				{
-					case (1):
+		if(g_menu_nest == 0)
+		{
+			g_current_key=0;
+			g_menu=&m[5];
+		}
+		else
+		{
+			g_current_key=0;
+			switch(g_menu->id)
 					{
-						if((*((uint8_t *)(g_menu->ext_data)+0)) == 0)
+						case (1):
 						{
-								(*((uint8_t *)(g_menu->ext_data)+2))++;
-								if((*((uint8_t *)(g_menu->ext_data)+2)) == 24)(*((uint8_t *)(g_menu->ext_data)+2)) =0;//time 
-								printf("h inc\r\n");
+							if((*((uint8_t *)(g_menu->ext_data)+0)) != 0)
+							{
+									(*((uint8_t *)(g_menu->ext_data)+2))++;
+									if((*((uint8_t *)(g_menu->ext_data)+2)) == 24)(*((uint8_t *)(g_menu->ext_data)+2)) =0;//time 
+									printf("h inc\r\n");
+							}
+							break;
 						}
-						break;
-					}
-					
-					case (2):
-					{
-						if((*((uint8_t *)(g_menu->ext_data)+0)) == 0)
+						
+						case (2):
 						{
-								(*((uint8_t *)(g_menu->ext_data)+2))++;
-								if((*((uint8_t *)(g_menu->ext_data)+2)) > 24)(*((uint8_t *)(g_menu->ext_data)+2)) =24;//temp
-								printf("h inc\r\n");
+							if((*((uint8_t *)(g_menu->ext_data)+0)) != 0)
+							{
+									(*((uint8_t *)(g_menu->ext_data)+2))++;
+									if((*((uint8_t *)(g_menu->ext_data)+2)) > 24)(*((uint8_t *)(g_menu->ext_data)+2)) =24;//temp
+									printf("h inc\r\n");
+							}
+							break;
 						}
-						break;
+						
+						default :break;
 					}
-					
-					default :break;
-				}
+		}
 	}
 	
 		else if(g_current_key== KEY_OXY)
 	{
-		g_current_key=0;
-		switch(g_menu->id)
-				{
-					case (1):
+		if(g_menu_nest ==0 )
+		{
+			g_current_key=0;
+			g_menu=&m[4];
+		}
+		else
+		{
+			g_current_key=0;
+			switch(g_menu->id)
 					{
-						if((*((uint8_t *)(g_menu->ext_data)+0)) == 0)
+						case (1):
 						{
-								if((*((uint8_t *)(g_menu->ext_data)+2)) == 0)(*((uint8_t *)(g_menu->ext_data)+2)) =24;
-								(*((uint8_t *)(g_menu->ext_data)+2))--;
-								printf("h dec\r\n");
+							if((*((uint8_t *)(g_menu->ext_data)+0)) != 0)
+							{
+									if((*((uint8_t *)(g_menu->ext_data)+2)) == 0)(*((uint8_t *)(g_menu->ext_data)+2)) =24;
+									(*((uint8_t *)(g_menu->ext_data)+2))--;
+									printf("h dec\r\n");
+							}
+							break;
 						}
-						break;
-					}
-					
-					case (2):
-					{
-						if((*((uint8_t *)(g_menu->ext_data)+0)) == 0)
+						
+						case (2):
 						{
-								(*((uint8_t *)(g_menu->ext_data)+2))--;
-								if((*((uint8_t *)(g_menu->ext_data)+2)) < 16)(*((uint8_t *)(g_menu->ext_data)+2)) =16;
-								printf("h dec\r\n");
+							if((*((uint8_t *)(g_menu->ext_data)+0)) != 0)
+							{
+									(*((uint8_t *)(g_menu->ext_data)+2))--;
+									if((*((uint8_t *)(g_menu->ext_data)+2)) < 16)(*((uint8_t *)(g_menu->ext_data)+2)) =16;
+									printf("h dec\r\n");
+							}
+							break;
 						}
-						break;
+						
+						default :break;
 					}
-					
-					default :break;
-				}
+		}
 	}
-	
 		
 }
 
@@ -343,48 +417,140 @@ static void dis_ext(void)
 	{	
 		case (1):
 		{
-			if((*((uint8_t *)(g_menu->ext_data)+0)) == 0)
+			if((*((uint8_t *)(g_menu->ext_data)+0)) != 0)
 			{
 				LcdPrintInt(4,2,(int32_t)(*((uint8_t *)(g_menu->ext_data)+1)));
 				LcdPrintInt(4,4,(int32_t)(*((uint8_t *)(g_menu->ext_data)+2)));
-				printf("ext is %d\r\n",*(uint8_t *)(g_menu->ext_data));
+				printf("guangzhao is on\r\n");
 			}
 			else
 			{
-				LcdPrintString(4,2,"OFF");
+				LcdPrintString(4,2,_IsOFF);
+				printf("guangzhao off\r\n");
 			}
 		}
 		
 		case (2):
 		{
-			if((*((uint8_t *)(g_menu->ext_data)+0)) == 0)
+			if((*((uint8_t *)(g_menu->ext_data)+0)) != 0)
 			{
 				LcdPrintInt(4,2,(int32_t)(*((uint8_t *)(g_menu->ext_data)+1)));
 				LcdPrintInt(4,4,(int32_t)(*((uint8_t *)(g_menu->ext_data)+2)));
-				printf("ext is %d\r\n",*(uint8_t *)(g_menu->ext_data));
+				printf("wendu  is on \r\n");
 			}
 			else
 			{
-				LcdPrintString(4,2,"OFF");
+				LcdPrintString(4,2,_IsOFF);
+				printf("wendu is off\r\n");
 			}
 		break;
 		}
 		case (3):
+		case (5):
+		case (6):
 		{
-			if((*((uint8_t *)(g_menu->ext_data)+0)) == 0)
+			if((*((uint8_t *)(g_menu->ext_data)+0)) != 0)
 			{
 				LcdPrintInt(4,2,(int32_t)(*((uint8_t *)(g_menu->ext_data)+1)));
 				printf("ext is %d\r\n",*(uint8_t *)(g_menu->ext_data));
 			}
 			else
 			{
-				LcdPrintString(4,2,"OFF");
+				LcdPrintString(4,2,_IsOFF);
 			}
 			break;
 		}
-		
+			
+		case (4):
+		{
+			if(g_menu->val != 0)
+			{
+				LcdPrintString(4,2,_IsON);
+				printf("light ON%d\r\n",g_menu->val);
+			}
+			else
+			{
+				LcdPrintString(4,2,_IsOFF);
+			}
+			break;
+		}
+			
 		default :break;
 	}
 }
+
+
+
+
+void __handle_operate(void)
+{
+	//printf("------------%d-%d-%d\r\n",m[3].val,r_guangzhao[1],r_guangzhao[2]);
+	if(m[3].val !=0)//;guangzhao
+	{
+		if((r_guangzhao[1] < TimeRaw) && (TimeRaw < r_guangzhao[2]))
+		{
+			printf("auto guangzhao\r\n");
+			if(g_Light >= 100)g_Light=100;
+			sync_pwm((100-g_Light)/2);
+		
+		}
+		else
+		{
+			sync_pwm(0);
+		}
+	}
+	else
+	{
+		sync_pwm(0);
+	}
+	
+	if(r_wendu[1] > g_TempMax)//低温
+	{
+		//加热
+	}
+	
+ if(r_wendu[2] < g_TempMin)//高温
+	{
+		//换水
+	}
+	
+	if(r_huanshui[0] != 0)
+	{
+		if(TimeRaw%r_huanshui[1] == 0)
+		{
+			//换水
+		}
+		else
+		{
+			//none
+		}
+	}
+	
+	if(r_chongyang[0] != 0)
+	{
+		if(TimeRaw%r_chongyang[1] == 0)
+		{
+			//chongyang
+		}
+		else
+		{
+			//none
+		}
+	}
+	
+	if(r_xunhuan[0] != 0)
+	{
+		if(TimeRaw%r_xunhuan[1] == 0)
+		{
+			//循环
+		}
+		else
+		{
+			//none
+		}
+	}
+	
+}
+
 
 

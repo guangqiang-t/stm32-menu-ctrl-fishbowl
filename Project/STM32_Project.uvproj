@@ -547,6 +547,11 @@
               <FileType>1</FileType>
               <FilePath>..\User\stm32f10x_it.c</FilePath>
             </File>
+            <File>
+              <FileName>task.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\task.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>

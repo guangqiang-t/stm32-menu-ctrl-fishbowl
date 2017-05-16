@@ -11,7 +11,7 @@ typedef struct
 	uint8_t id;
 	void *prev_menu;
 	uint8_t lock;
-	uint8_t *name;
+	int8_t *name;
 	int32_t val;
 	void *ext_data;
 	void *next_menu;
@@ -27,7 +27,7 @@ extern void menu_init(menu_list *m,\
 				uint8_t id,\
 				void *pre,\
 				uint8_t lock,\
-				uint8_t *nam,\
+				int8_t *nam,\
 				int32_t value,\
 				void *ext_data,\
 				void *next);
@@ -42,6 +42,6 @@ extern int32_t  menu_set_val(menu_list *p,int32_t v);
 void menu_display(void);
 void dis_time(void);
 void __handle_key(void);
-
+void __handle_operate(void);
 
 #endif //_menu_H_

@@ -25,6 +25,7 @@
 ".\menu.o"
 ".\distimer.o"
 ".\stm32f10x_it.o"
+".\task.o"
 --library_type=microlib --strict --scatter ".\STM32_Project.sct"
 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
