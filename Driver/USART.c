@@ -53,7 +53,7 @@ void USART1_Config(void)
  */
 int fputc(int ch, FILE *f)
 {
-	//return 0;
+	return 0;
 	
 /* 将Printf内容发往串口 */
 	while( USART_GetFlagStatus(USART1, USART_FLAG_TC) == RESET );

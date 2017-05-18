@@ -48,11 +48,12 @@ void water_exchange(uint8_t sta)
 {
 //	uint8_t a,b,c;
 
-	if((gp_task_huanshui->enable == stask_disable)&&(g_cnt != 0))
+	if((gp_task_huanshui->enable == stask_disable)&&(g_cnt == 1))
 	{
 		//gp_task_huanshui->enable =stask_enable;
 		//gp_task_huanshui->state = sta;
 		water_exchange_config();
+		printf("output lock disable\r\n");
 		g_cnt= 0;
 	}
 	
@@ -63,7 +64,7 @@ void water_exchange(uint8_t sta)
 			ChangeRelayStatus(huanshui,NC);
 			gp_task_huanshui->state = stask_end;
 			gp_task_huanshui->enable = stask_disable;
-			printf("\r\n\r\n------------------------>end\r\n");
+			printf("\r\n\r\n------------------------>huanshui ok...\r\n");
 		}
 
 		if(gp_task_huanshui->state == s2)//s2
@@ -71,7 +72,7 @@ void water_exchange(uint8_t sta)
 			if(get_high_water())
 			{
 				gp_task_huanshui->state =s3;
-				printf("\r\n\r\n--------------------------->s3\r\n");
+				printf("\r\n\r\n--------------------------->jiashui ok...\r\n");
 			}
 		}
 		
@@ -80,17 +81,18 @@ void water_exchange(uint8_t sta)
 			ChangeRelayStatus(paishui,NC);//关闭排水
 			ChangeRelayStatus(huanshui,NO);
 			gp_task_huanshui->state = s2;
-			printf("\r\n\r\n-------------------------------->s2\r\n");
+			printf("\r\n\r\n-------------------------------->jiashui...\r\n");
 		}
 		
 		
 		if(gp_task_huanshui->state == stask_start)//start
 		{
+			printf("-----------------------------------------paishui....\r\n");
 			ChangeRelayStatus(paishui,NO);//打开排水
 			if(get_low_water())
 			{
 				gp_task_huanshui->state =s1;
-				printf("\r\n\r\n----------------------------->start\r\n");
+				printf("\r\n\r\n----------------------------->paishui ok...\r\n");
 			}
 		}	
 	}

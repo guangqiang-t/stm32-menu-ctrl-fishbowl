@@ -229,15 +229,15 @@ void GetTemp(void)
 {
 	g_Temp[0]=(ds18b20_read(0)-2800)/17;
 	g_Temp[1]=(ds18b20_read(1)-2800)/17;
-	if(g_Temp[0] > g_Temp[0] )
+	if(g_Temp[0] > g_Temp[1] )
 	{
-		g_TempMax=g_Temp[0];
-		g_TempMin=g_Temp[1];
+		g_TempMax=g_Temp[0]/10;
+		g_TempMin=g_Temp[1]/10;
 	}
 	else
 	{
-		g_TempMax=g_Temp[1];
-		g_TempMin=g_Temp[0];
+		g_TempMax=g_Temp[1]/10;
+		g_TempMin=g_Temp[0]/10;
 	}
 	
 }

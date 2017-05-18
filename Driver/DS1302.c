@@ -10,11 +10,11 @@ unsigned char  WRITE_RTC_ADDR[7] = {0x80, 0x82, 0x84, 0x86, 0x88, 0x8a, 0x8c};
 
 //---DS1302时钟初始化2013年1月1日星期二12点00分00秒。---//
 //---存储顺序是秒分时日月周年,存储格式是用BCD码---//
-unsigned char TIME[7] = {0, 0x33, 0x23, 0x22, 0x04, 0x02, 0x17};
+unsigned char TIME[7] = {0, 0x11, 0x14, 0x18, 0x05, 0x02, 0x17};
 
 volatile unsigned char TimeRaw=0;
-unsigned char YearString[11]={"2017-04-22\0"};
-unsigned char TimeString[9]={"23-34-00\0"};
+unsigned char YearString[11]={"2017-05-18\0"};
+unsigned char TimeString[9]={"14-10-00\0"};
 
 
 static void DS1302_RST_L(void);

@@ -4,1117 +4,197 @@
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
 C:\Users\admin\×ÀÃæ\ê«ºìÎ°\stm32\mdk\Project\STM32_Project.uvproj
-Project File Date:  05/13/2017
+Project File Date:  05/16/2017
 
 <h2>Output:</h2>
 Build target 'Template'
-compiling task.c...
-linking...
-Program Size: Code=16004 RO-data=284 RW-data=272 ZI-data=1192  
-".\STM32_Project.axf" - 0 Errors, 0 Warning(s).
-Build target 'Template'
-compiling task.c...
-..\User\task.c(17): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=16004 RO-data=284 RW-data=272 ZI-data=1192  
-".\STM32_Project.axf" - 0 Errors, 1 Warning(s).
-Build target 'Template'
-compiling task.c...
-..\User\task.c(26): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=16004 RO-data=284 RW-data=272 ZI-data=1192  
-".\STM32_Project.axf" - 0 Errors, 1 Warning(s).
-Build target 'Template'
-compiling task.c...
-..\User\task.c(23): error:  #70: incomplete type is not allowed
-..\User\task.c(23): error:  #65: expected a ";"
-..\User\task.c(32): warning:  #1-D: last line of file ends without a newline
-..\User\task.c(32): warning: At end of source:  #12-D: parsing restarts here after previous syntax error
-".\STM32_Project.axf" - 2 Errors, 2 Warning(s).
-Target not created
-Build target 'Template'
-compiling task.c...
-linking...
-Program Size: Code=16004 RO-data=284 RW-data=272 ZI-data=1192  
-".\STM32_Project.axf" - 0 Errors, 0 Warning(s).
-Build target 'Template'
-compiling task.c...
-linking...
-Program Size: Code=16004 RO-data=284 RW-data=272 ZI-data=1192  
-".\STM32_Project.axf" - 0 Errors, 0 Warning(s).
-Build target 'Template'
-compiling task.c...
-linking...
-Program Size: Code=16004 RO-data=284 RW-data=272 ZI-data=1192  
-".\STM32_Project.axf" - 0 Errors, 0 Warning(s).
-Build target 'Template'
 compiling main.c...
-compiling menu.c...
-..\User\menu.c(109): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(140): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(405): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(419): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(434): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(443): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(448): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(476): error: At end of source:  #67: expected a "}"
-".\STM32_Project.axf" - 1 Errors, 8 Warning(s).
+..\User\main.c(31): warning:  #223-D: function "delay_ms" declared implicitly
+linking...
+.\STM32_Project.axf: Error: L6218E: Undefined symbol delay_ms (referred from main.o).
+".\STM32_Project.axf" - 1 Errors, 1 Warning(s).
 Target not created
-Build target 'Template'
-compiling menu.c...
-..\User\menu.c(109): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(140): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(405): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(419): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(434): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(443): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(448): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-linking...
-Program Size: Code=16052 RO-data=284 RW-data=272 ZI-data=1192  
-".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
-Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Application running ...
-Build target 'Template'
-compiling menu.c...
-..\User\menu.c(109): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(140): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(405): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(419): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(434): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(443): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(448): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-linking...
-Program Size: Code=16052 RO-data=284 RW-data=272 ZI-data=1192  
-".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
-Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Application running ...
-compiling menu.c...
-..\User\menu.c(109): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(140): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(197): error:  #29: expected an expression
-..\User\menu.c(406): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(420): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(435): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(444): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(449): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-"..\User\menu.c" - 1 Errors, 8 Warning(s).
-Build target 'Template'
-compiling menu.c...
-..\User\menu.c(109): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(140): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(197): error:  #29: expected an expression
-..\User\menu.c(406): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(420): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(435): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(444): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(449): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-".\STM32_Project.axf" - 1 Errors, 8 Warning(s).
-Target not created
-Build target 'Template'
-compiling menu.c...
-..\User\menu.c(109): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(140): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(197): error:  #29: expected an expression
-..\User\menu.c(197): error:  #65: expected a ";"
-..\User\menu.c(406): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(420): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(435): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(444): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(449): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-".\STM32_Project.axf" - 2 Errors, 8 Warning(s).
-Target not created
-Build target 'Template'
-compiling menu.c...
-..\User\menu.c(109): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(140): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(406): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(420): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(435): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(444): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(449): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-linking...
-Program Size: Code=16068 RO-data=284 RW-data=272 ZI-data=1192  
-".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
-Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Application running ...
-Build target 'Template'
-compiling menu.c...
-..\User\menu.c(109): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(140): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(413): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(427): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(442): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(451): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(456): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-linking...
-Program Size: Code=16072 RO-data=284 RW-data=272 ZI-data=1192  
-".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
-Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Application running ...
-Build target 'Template'
-compiling menu.c...
-..\User\menu.c(109): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(140): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(413): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(427): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(442): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(451): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(456): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-linking...
-Program Size: Code=16072 RO-data=284 RW-data=272 ZI-data=1192  
-".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
-Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Application running ...
-compiling main.c...
-"..\User\main.c" - 0 Errors, 0 Warning(s).
-Build target 'Template'
-compiling menu.c...
-..\User\menu.c(109): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(140): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(413): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(427): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(442): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(451): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(456): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-compiling DisTimer.c...
-..\User\DisTimer.c(47): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\DisTimer.c(48): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-linking...
-Program Size: Code=16076 RO-data=284 RW-data=272 ZI-data=1192  
-".\STM32_Project.axf" - 0 Errors, 10 Warning(s).
-Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Application running ...
-Build target 'Template'
-compiling menu.c...
-..\User\menu.c(109): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(140): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(413): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(427): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(442): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(451): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(456): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-linking...
-Program Size: Code=16076 RO-data=284 RW-data=272 ZI-data=1192  
-".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
-Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Application running ...
-Build target 'Template'
-compiling menu.c...
-..\User\menu.c(109): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(140): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(413): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(427): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(442): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(451): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(456): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-linking...
-Program Size: Code=16084 RO-data=284 RW-data=272 ZI-data=1192  
-".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
-Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Application running ...
-Build target 'Template'
-compiling menu.c...
-..\User\menu.c(109): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(140): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(416): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(430): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(445): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(454): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(459): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-linking...
-Program Size: Code=16100 RO-data=284 RW-data=272 ZI-data=1192  
-".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
-Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Application running ...
-compiling menu.c...
-..\User\menu.c(109): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(140): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(204): error:  #65: expected a ";"
-..\User\menu.c(418): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(432): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(447): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(456): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(461): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-"..\User\menu.c" - 1 Errors, 8 Warning(s).
-Build target 'Template'
-compiling menu.c...
-..\User\menu.c(109): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(140): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(204): error:  #65: expected a ";"
-..\User\menu.c(418): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(432): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(447): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(456): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(461): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-".\STM32_Project.axf" - 1 Errors, 8 Warning(s).
-Target not created
-Build target 'Template'
-compiling menu.c...
-..\User\menu.c(109): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(140): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(204): error:  #65: expected a ";"
-..\User\menu.c(418): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(432): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(447): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(456): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(461): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-".\STM32_Project.axf" - 1 Errors, 8 Warning(s).
-Target not created
-Build target 'Template'
-compiling menu.c...
-..\User\menu.c(109): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(140): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(418): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(432): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(447): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(456): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(461): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-linking...
-Program Size: Code=16092 RO-data=284 RW-data=272 ZI-data=1192  
-".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
-Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Application running ...
-Build target 'Template'
-compiling menu.c...
-..\User\menu.c(109): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(140): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(203): error:  #29: expected an expression
-..\User\menu.c(418): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(432): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(447): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(456): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(461): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-".\STM32_Project.axf" - 1 Errors, 8 Warning(s).
-Target not created
-Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Application running ...
-Build target 'Template'
-compiling menu.c...
-..\User\menu.c(109): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(140): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(203): error:  #29: expected an expression
-..\User\menu.c(418): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(432): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(447): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(456): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(461): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-".\STM32_Project.axf" - 1 Errors, 8 Warning(s).
-Target not created
-Build target 'Template'
-compiling menu.c...
-..\User\menu.c(109): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(140): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(418): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(432): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(447): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(456): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(461): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-linking...
-Program Size: Code=16092 RO-data=284 RW-data=272 ZI-data=1192  
-".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
-Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Application running ...
-Build target 'Template'
-compiling menu.c...
-..\User\menu.c(109): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(140): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(183): warning:  #1441-D: nonstandard cast on lvalue
-..\User\menu.c(183): error:  #513: a value of type "int" cannot be assigned to an entity of type "uint8_t *"
-..\User\menu.c(183): error:  #18: expected a ")"
-..\User\menu.c(187): warning:  #1441-D: nonstandard cast on lvalue
-..\User\menu.c(187): error:  #18: expected a ")"
-..\User\menu.c(215): error:  #127: expected a statement
-..\User\menu.c(238): warning:  #12-D: parsing restarts here after previous syntax error
-..\User\menu.c(241): error:  #121: a case label may only be used within a switch
-..\User\menu.c(242): error:  #121: a case label may only be used within a switch
-..\User\menu.c(243): error:  #121: a case label may only be used within a switch
-..\User\menu.c(251): error:  #116: a break statement may only be used within a loop or switch
-..\User\menu.c(253): error:  #122: a default label may only be used within a switch
-..\User\menu.c(253): error:  #116: a break statement may only be used within a loop or switch
-..\User\menu.c(255): error:  #169: expected a declaration
-..\User\menu.c(280): warning:  #12-D: parsing restarts here after previous syntax error
-..\User\menu.c(281): error:  #169: expected a declaration
-..\User\menu.c(297): warning:  #12-D: parsing restarts here after previous syntax error
-..\User\menu.c(298): error:  #169: expected a declaration
-..\User\menu.c(354): warning:  #12-D: parsing restarts here after previous syntax error
-..\User\menu.c(355): error:  #169: expected a declaration
-..\User\menu.c(393): warning:  #12-D: parsing restarts here after previous syntax error
-..\User\menu.c(394): error:  #169: expected a declaration
-..\User\menu.c(432): warning:  #12-D: parsing restarts here after previous syntax error
-..\User\menu.c(433): error:  #169: expected a declaration
-..\User\menu.c(464): warning:  #12-D: parsing restarts here after previous syntax error
-..\User\menu.c(465): error:  #169: expected a declaration
-..\User\menu.c(488): warning: At end of source:  #12-D: parsing restarts here after previous syntax error
-..\User\menu.c(37): error:  #114: function "dis_ext" was referenced but not defined
-".\STM32_Project.axf" - 18 Errors, 13 Warning(s).
-Target not created
-Build target 'Template'
-compiling menu.c...
-..\User\menu.c(109): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(140): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(215): error:  #127: expected a statement
-..\User\menu.c(238): warning:  #12-D: parsing restarts here after previous syntax error
-..\User\menu.c(241): error:  #121: a case label may only be used within a switch
-..\User\menu.c(242): error:  #121: a case label may only be used within a switch
-..\User\menu.c(243): error:  #121: a case label may only be used within a switch
-..\User\menu.c(251): error:  #116: a break statement may only be used within a loop or switch
-..\User\menu.c(253): error:  #122: a default label may only be used within a switch
-..\User\menu.c(253): error:  #116: a break statement may only be used within a loop or switch
-..\User\menu.c(255): error:  #169: expected a declaration
-..\User\menu.c(280): warning:  #12-D: parsing restarts here after previous syntax error
-..\User\menu.c(281): error:  #169: expected a declaration
-..\User\menu.c(297): warning:  #12-D: parsing restarts here after previous syntax error
-..\User\menu.c(298): error:  #169: expected a declaration
-..\User\menu.c(354): warning:  #12-D: parsing restarts here after previous syntax error
-..\User\menu.c(355): error:  #169: expected a declaration
-..\User\menu.c(393): warning:  #12-D: parsing restarts here after previous syntax error
-..\User\menu.c(394): error:  #169: expected a declaration
-..\User\menu.c(432): warning:  #12-D: parsing restarts here after previous syntax error
-..\User\menu.c(433): error:  #169: expected a declaration
-..\User\menu.c(464): warning:  #12-D: parsing restarts here after previous syntax error
-..\User\menu.c(465): error:  #169: expected a declaration
-..\User\menu.c(488): warning: At end of source:  #12-D: parsing restarts here after previous syntax error
-..\User\menu.c(37): error:  #114: function "dis_ext" was referenced but not defined
-".\STM32_Project.axf" - 15 Errors, 11 Warning(s).
-Target not created
-Build target 'Template'
-compiling menu.c...
-..\User\menu.c(109): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(140): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(215): error:  #127: expected a statement
-..\User\menu.c(238): warning:  #12-D: parsing restarts here after previous syntax error
-..\User\menu.c(241): error:  #121: a case label may only be used within a switch
-..\User\menu.c(242): error:  #121: a case label may only be used within a switch
-..\User\menu.c(243): error:  #121: a case label may only be used within a switch
-..\User\menu.c(251): error:  #116: a break statement may only be used within a loop or switch
-..\User\menu.c(253): error:  #122: a default label may only be used within a switch
-..\User\menu.c(253): error:  #116: a break statement may only be used within a loop or switch
-..\User\menu.c(255): error:  #169: expected a declaration
-..\User\menu.c(280): warning:  #12-D: parsing restarts here after previous syntax error
-..\User\menu.c(281): error:  #169: expected a declaration
-..\User\menu.c(297): warning:  #12-D: parsing restarts here after previous syntax error
-..\User\menu.c(298): error:  #169: expected a declaration
-..\User\menu.c(354): warning:  #12-D: parsing restarts here after previous syntax error
-..\User\menu.c(355): error:  #169: expected a declaration
-..\User\menu.c(393): warning:  #12-D: parsing restarts here after previous syntax error
-..\User\menu.c(394): error:  #169: expected a declaration
-..\User\menu.c(432): warning:  #12-D: parsing restarts here after previous syntax error
-..\User\menu.c(433): error:  #169: expected a declaration
-..\User\menu.c(464): warning:  #12-D: parsing restarts here after previous syntax error
-..\User\menu.c(465): error:  #169: expected a declaration
-..\User\menu.c(488): warning: At end of source:  #12-D: parsing restarts here after previous syntax error
-..\User\menu.c(37): error:  #114: function "dis_ext" was referenced but not defined
-".\STM32_Project.axf" - 15 Errors, 11 Warning(s).
-Target not created
-Build target 'Template'
-compiling menu.c...
-..\User\menu.c(109): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(140): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(415): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(429): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(444): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(453): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(458): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-linking...
-Program Size: Code=16044 RO-data=284 RW-data=272 ZI-data=1192  
-".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
-Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Application running ...
-Build target 'Template'
-compiling menu.c...
-..\User\menu.c(109): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(140): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(415): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(429): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(444): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(453): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(458): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-linking...
-Program Size: Code=16044 RO-data=284 RW-data=272 ZI-data=1192  
-".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
-Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Application running ...
-Build target 'Template'
-compiling menu.c...
-..\User\menu.c(109): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(140): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(414): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(428): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(443): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(452): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(457): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-linking...
-Program Size: Code=16004 RO-data=284 RW-data=272 ZI-data=1192  
-".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
-Build target 'Template'
-compiling menu.c...
-..\User\menu.c(109): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(140): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(414): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(428): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(443): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(452): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(457): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-linking...
-Program Size: Code=15996 RO-data=284 RW-data=272 ZI-data=1192  
-".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
-Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Application running ...
-Build target 'Template'
-compiling menu.c...
-..\User\menu.c(109): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(140): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(414): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(428): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(443): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(452): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(457): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-linking...
-Program Size: Code=16000 RO-data=284 RW-data=272 ZI-data=1192  
-".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
-Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Application running ...
-Build target 'Template'
-compiling menu.c...
-..\User\menu.c(109): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(140): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(428): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(442): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(457): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(466): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(471): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-linking...
-Program Size: Code=16068 RO-data=284 RW-data=272 ZI-data=1192  
-".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
-Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Application running ...
-Build target 'Template'
-compiling menu.c...
-..\User\menu.c(109): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(140): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(428): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(442): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(457): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(466): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(471): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-linking...
-Program Size: Code=16068 RO-data=284 RW-data=280 ZI-data=1192  
-".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
-Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Application running ...
-Build target 'Template'
-compiling menu.c...
-..\User\menu.c(109): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(140): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(428): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(443): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(459): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(468): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-linking...
-Program Size: Code=16136 RO-data=284 RW-data=280 ZI-data=1192  
-".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
-Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Application running ...
-Build target 'Template'
-compiling menu.c...
-..\User\menu.c(109): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(140): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(428): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(443): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(459): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(468): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-linking...
-Program Size: Code=16136 RO-data=284 RW-data=280 ZI-data=1192  
-".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
-Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Application running ...
-Build target 'Template'
-compiling menu.c...
-..\User\menu.c(109): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(140): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(428): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(443): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(459): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(468): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-linking...
-Program Size: Code=16136 RO-data=284 RW-data=280 ZI-data=1192  
-".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
-Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Application running ...
-Build target 'Template'
-compiling menu.c...
-..\User\menu.c(109): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(140): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(428): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(443): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(459): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(468): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(497): error:  #169: expected a declaration
-..\User\menu.c(503): warning: At end of source:  #12-D: parsing restarts here after previous syntax error
-".\STM32_Project.axf" - 1 Errors, 9 Warning(s).
-Target not created
-Build target 'Template'
-compiling menu.c...
-..\User\menu.c(109): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(140): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(428): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(443): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(459): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(468): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-linking...
-Program Size: Code=16160 RO-data=284 RW-data=280 ZI-data=1192  
-".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
-Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Application running ...
-Build target 'Template'
-compiling menu.c...
-..\User\menu.c(109): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(140): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(428): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(443): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(459): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(468): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-linking...
-Program Size: Code=16160 RO-data=284 RW-data=280 ZI-data=1192  
-".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
-Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Application running ...
-Build target 'Template'
-compiling menu.c...
-..\User\menu.c(109): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(140): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(428): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(443): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(459): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(468): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-linking...
-Program Size: Code=16160 RO-data=284 RW-data=280 ZI-data=1192  
-".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
-Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Application running ...
-Build target 'Template'
-compiling menu.c...
-..\User\menu.c(109): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(140): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(428): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(443): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(459): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(468): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-linking...
-Program Size: Code=16160 RO-data=284 RW-data=280 ZI-data=1192  
-".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
-Build target 'Template'
-compiling menu.c...
-..\User\menu.c(109): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(140): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(428): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(443): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(459): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(468): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-linking...
-Program Size: Code=16112 RO-data=284 RW-data=280 ZI-data=1192  
-".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
-Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Application running ...
-Build target 'Template'
-compiling menu.c...
-..\User\menu.c(109): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(140): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(428): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(443): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(459): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(468): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-linking...
-Program Size: Code=16112 RO-data=284 RW-data=280 ZI-data=1192  
-".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
-Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Application running ...
-Build target 'Template'
-compiling menu.c...
-..\User\menu.c(109): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(140): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(428): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(443): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(459): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(468): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-linking...
-Program Size: Code=16112 RO-data=284 RW-data=280 ZI-data=1192  
-".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
-Build target 'Template'
-compiling menu.c...
-..\User\menu.c(109): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(140): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(428): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(443): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(459): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(468): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-linking...
-Program Size: Code=16112 RO-data=284 RW-data=280 ZI-data=1192  
-".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
-Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Application running ...
-Build target 'Template'
-compiling DS1302.c...
-compiling main.c...
-compiling menu.c...
-..\User\menu.c(109): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(140): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(428): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(443): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(459): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(468): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-compiling DisTimer.c...
-..\User\DisTimer.c(47): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\DisTimer.c(48): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-linking...
-Program Size: Code=16084 RO-data=284 RW-data=280 ZI-data=1192  
-".\STM32_Project.axf" - 0 Errors, 10 Warning(s).
-Build target 'Template'
-compiling menu.c...
-..\User\menu.c(109): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(140): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(428): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(443): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(459): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(468): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-linking...
-Program Size: Code=16084 RO-data=284 RW-data=280 ZI-data=1192  
-".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
-Build target 'Template'
-compiling menu.c...
-..\User\menu.c(109): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(140): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(428): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(443): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(459): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(468): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-linking...
-Program Size: Code=16116 RO-data=284 RW-data=280 ZI-data=1192  
-".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
-Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Application running ...
-Build target 'Template'
-compiling menu.c...
-..\User\menu.c(109): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(140): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(428): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(443): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(459): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(468): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-linking...
-Program Size: Code=16116 RO-data=284 RW-data=280 ZI-data=1192  
-".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
-Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Application running ...
-Build target 'Template'
-compiling menu.c...
-..\User\menu.c(109): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(140): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(428): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(443): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(459): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(468): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-linking...
-Program Size: Code=16120 RO-data=284 RW-data=280 ZI-data=1192  
-".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
-Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Application running ...
-Build target 'Template'
-compiling menu.c...
-..\User\menu.c(109): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(140): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(428): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(443): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(459): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(468): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-linking...
-Program Size: Code=16148 RO-data=284 RW-data=280 ZI-data=1192  
-".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
-Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Application running ...
-Build target 'Template'
-compiling menu.c...
-..\User\menu.c(109): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(140): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(428): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(443): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(459): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(468): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-linking...
-Program Size: Code=16152 RO-data=284 RW-data=280 ZI-data=1192  
-".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
-Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Application running ...
-Build target 'Template'
-compiling menu.c...
-..\User\menu.c(109): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(140): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(428): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(443): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(459): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(468): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-linking...
-Program Size: Code=16160 RO-data=284 RW-data=280 ZI-data=1192  
-".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
-Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Application running ...
-Build target 'Template'
-compiling DS18B20.c...
-compiling main.c...
-compiling menu.c...
-..\User\menu.c(109): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(140): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(428): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(443): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(459): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(468): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-linking...
-Program Size: Code=16208 RO-data=284 RW-data=284 ZI-data=1196  
-".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
-Build target 'Template'
-compiling menu.c...
-..\User\menu.c(109): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(140): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(428): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(443): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(459): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(468): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-linking...
-Program Size: Code=16208 RO-data=284 RW-data=284 ZI-data=1196  
-".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
-Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Application running ...
-Build target 'Template'
-compiling menu.c...
-..\User\menu.c(109): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(140): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(428): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(443): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(459): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(468): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-linking...
-Program Size: Code=16208 RO-data=284 RW-data=284 ZI-data=1196  
-".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
-Build target 'Template'
-linking...
-Program Size: Code=16208 RO-data=284 RW-data=284 ZI-data=1196  
-".\STM32_Project.axf" - 0 Errors, 0 Warning(s).
-Build target 'Template'
-compiling LED.c...
-linking...
-Program Size: Code=16296 RO-data=284 RW-data=284 ZI-data=1196  
-".\STM32_Project.axf" - 0 Errors, 0 Warning(s).
-Build target 'Template'
-compiling LED.c...
-..\User\LED.c(61): warning:  #223-D: function "printf" declared implicitly
-linking...
-Program Size: Code=16316 RO-data=284 RW-data=284 ZI-data=1196  
-".\STM32_Project.axf" - 0 Errors, 1 Warning(s).
-Build target 'Template'
-compiling LED.c...
-linking...
-Program Size: Code=16316 RO-data=284 RW-data=284 ZI-data=1196  
-".\STM32_Project.axf" - 0 Errors, 0 Warning(s).
-Build target 'Template'
-compiling main.c...
-compiling LED.c...
-linking...
-Program Size: Code=16320 RO-data=284 RW-data=284 ZI-data=1196  
-".\STM32_Project.axf" - 0 Errors, 0 Warning(s).
-Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Application running ...
-Build target 'Template'
-compiling LED.c...
-linking...
-Program Size: Code=16324 RO-data=284 RW-data=284 ZI-data=1196  
-".\STM32_Project.axf" - 0 Errors, 0 Warning(s).
-Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Application running ...
-Build target 'Template'
-compiling LED.c...
-linking...
-Program Size: Code=16352 RO-data=284 RW-data=284 ZI-data=1196  
-".\STM32_Project.axf" - 0 Errors, 0 Warning(s).
-Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Application running ...
-Build target 'Template'
-compiling LED.c...
-linking...
-Program Size: Code=16324 RO-data=284 RW-data=284 ZI-data=1196  
-".\STM32_Project.axf" - 0 Errors, 0 Warning(s).
-Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Application running ...
-Build target 'Template'
-compiling main.c...
-compiling LED.c...
-linking...
-Program Size: Code=16408 RO-data=284 RW-data=284 ZI-data=1196  
-".\STM32_Project.axf" - 0 Errors, 0 Warning(s).
 Build target 'Template'
 compiling main.c...
 linking...
-Program Size: Code=16408 RO-data=284 RW-data=284 ZI-data=1196  
+Program Size: Code=16964 RO-data=284 RW-data=296 ZI-data=1192  
 ".\STM32_Project.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
 Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
 Erase Done.
 Programming Done.
 Verify OK.
 Application running ...
-Build target 'Template'
-compiling LED.c...
-linking...
-Program Size: Code=16428 RO-data=284 RW-data=284 ZI-data=1196  
-".\STM32_Project.axf" - 0 Errors, 0 Warning(s).
-Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Application running ...
-Build target 'Template'
-compiling LED.c...
-linking...
-Program Size: Code=16424 RO-data=284 RW-data=284 ZI-data=1196  
-".\STM32_Project.axf" - 0 Errors, 0 Warning(s).
-Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Application running ...
-Build target 'Template'
-compiling LED.c...
-linking...
-Program Size: Code=16400 RO-data=284 RW-data=284 ZI-data=1196  
-".\STM32_Project.axf" - 0 Errors, 0 Warning(s).
-Build target 'Template'
-compiling main.c...
-compiling task.c...
-linking...
-Program Size: Code=16400 RO-data=284 RW-data=284 ZI-data=1196  
-".\STM32_Project.axf" - 0 Errors, 0 Warning(s).
-Build target 'Template'
-compiling main.c...
-compiling task.c...
-linking...
-Program Size: Code=16400 RO-data=284 RW-data=284 ZI-data=1196  
-".\STM32_Project.axf" - 0 Errors, 0 Warning(s).
 Build target 'Template'
 compiling relay.c...
 compiling main.c...
-compiling task.c...
-..\User\task.c(47): warning:  #177-D: variable "a" was declared but never referenced
-..\User\task.c(47): warning:  #177-D: variable "b" was declared but never referenced
-..\User\task.c(47): warning:  #177-D: variable "c" was declared but never referenced
 linking...
-Program Size: Code=16424 RO-data=284 RW-data=284 ZI-data=1196  
-".\STM32_Project.axf" - 0 Errors, 3 Warning(s).
-Build target 'Template'
-compiling main.c...
-compiling task.c...
-..\User\task.c(47): warning:  #177-D: variable "a" was declared but never referenced
-..\User\task.c(47): warning:  #177-D: variable "b" was declared but never referenced
-..\User\task.c(47): warning:  #177-D: variable "c" was declared but never referenced
-linking...
-Program Size: Code=16612 RO-data=284 RW-data=292 ZI-data=1196  
-".\STM32_Project.axf" - 0 Errors, 3 Warning(s).
-Build target 'Template'
-linking...
-Program Size: Code=16612 RO-data=284 RW-data=292 ZI-data=1196  
+Program Size: Code=16956 RO-data=284 RW-data=296 ZI-data=1192  
 ".\STM32_Project.axf" - 0 Errors, 0 Warning(s).
 Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
 Erase Done.
 Programming Done.
 Verify OK.
 Application running ...
+Build target 'Template'
+compiling menu.c...
+..\User\menu.c(123): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(147): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(148): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(436): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(451): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(467): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(476): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(481): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+linking...
+Program Size: Code=16964 RO-data=284 RW-data=296 ZI-data=1192  
+".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
+Build target 'Template'
+compiling menu.c...
+..\User\menu.c(123): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(147): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(148): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(441): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(456): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(472): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(481): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(486): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+linking...
+Program Size: Code=17096 RO-data=284 RW-data=296 ZI-data=1192  
+".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
+Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Template'
+compiling menu.c...
+..\User\menu.c(123): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(147): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(148): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(441): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(457): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(482): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(487): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+linking...
+Program Size: Code=17096 RO-data=284 RW-data=296 ZI-data=1192  
+".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
+Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Template'
+compiling relay.c...
+linking...
+Program Size: Code=17172 RO-data=284 RW-data=296 ZI-data=1192  
+".\STM32_Project.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Template'
+compiling main.c...
+linking...
+Program Size: Code=17172 RO-data=284 RW-data=296 ZI-data=1192  
+".\STM32_Project.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Template'
+compiling menu.c...
+..\User\menu.c(123): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(147): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(148): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(441): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(457): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(482): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(487): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+linking...
+Program Size: Code=17172 RO-data=284 RW-data=296 ZI-data=1192  
+".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
+Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Template'
+compiling menu.c...
+..\User\menu.c(123): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(147): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(148): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(441): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(457): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(482): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(487): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+linking...
+Program Size: Code=17172 RO-data=284 RW-data=296 ZI-data=1192  
+".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
+Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Template'
+compiling relay.c...
+linking...
+Program Size: Code=17172 RO-data=284 RW-data=296 ZI-data=1192  
+".\STM32_Project.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Template'
+compiling relay.c...
+..\Driver\relay.c(84): warning:  #223-D: function "elseprintf" declared implicitly
+..\Driver\relay.c(92): error:  #122: a default label may only be used within a switch
+..\Driver\relay.c(92): error:  #116: a break statement may only be used within a loop or switch
+..\Driver\relay.c(94): error:  #169: expected a declaration
+compiling menu.c...
+..\User\menu.c(123): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(147): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(148): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(441): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(457): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(482): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(487): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+".\STM32_Project.axf" - 3 Errors, 9 Warning(s).
+Target not created
+Build target 'Template'
+compiling relay.c...
+..\Driver\relay.c(84): warning:  #223-D: function "elseprintf" declared implicitly
+..\Driver\relay.c(92): error:  #122: a default label may only be used within a switch
+..\Driver\relay.c(92): error:  #116: a break statement may only be used within a loop or switch
+..\Driver\relay.c(94): error:  #169: expected a declaration
+compiling menu.c...
+..\User\menu.c(123): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(147): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(148): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(441): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(457): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(482): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(487): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+".\STM32_Project.axf" - 3 Errors, 9 Warning(s).
+Target not created
+Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Template'
+compiling relay.c...
+linking...
+Program Size: Code=17172 RO-data=284 RW-data=296 ZI-data=1192  
+".\STM32_Project.axf" - 0 Errors, 0 Warning(s).
 Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
 Erase Done.
 Programming Done.
@@ -1146,32 +226,24 @@ compiling DS18B20.c...
 compiling pwm.c...
 compiling relay.c...
 compiling main.c...
-..\User\main.c(44): warning:  #223-D: function "water_exchange_config" declared implicitly
 compiling LED.c...
 compiling menu.c...
-..\User\menu.c(109): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(140): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
-..\User\menu.c(428): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(443): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(459): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
-..\User\menu.c(468): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(123): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(147): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(148): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(441): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(457): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
 ..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(482): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(487): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
 compiling DisTimer.c...
 ..\User\DisTimer.c(47): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
 ..\User\DisTimer.c(48): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
 compiling stm32f10x_it.c...
 compiling task.c...
-..\User\task.c(56): warning:  #223-D: function "printf" declared implicitly
-..\User\task.c(64): warning:  #223-D: function "printf" declared implicitly
-..\User\task.c(73): warning:  #223-D: function "printf" declared implicitly
-..\User\task.c(83): warning:  #223-D: function "printf" declared implicitly
-..\User\task.c(47): warning:  #177-D: variable "a" was declared but never referenced
-..\User\task.c(47): warning:  #177-D: variable "b" was declared but never referenced
-..\User\task.c(47): warning:  #177-D: variable "c" was declared but never referenced
 linking...
-Program Size: Code=16668 RO-data=284 RW-data=292 ZI-data=1196  
-".\STM32_Project.axf" - 0 Errors, 21 Warning(s).
+Program Size: Code=17172 RO-data=284 RW-data=296 ZI-data=1192  
+".\STM32_Project.axf" - 0 Errors, 13 Warning(s).
 Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
 Erase Done.
 Programming Done.
@@ -1179,7 +251,66 @@ Verify OK.
 Application running ...
 Build target 'Template'
 linking...
-Program Size: Code=16668 RO-data=284 RW-data=292 ZI-data=1196  
+Program Size: Code=17172 RO-data=284 RW-data=296 ZI-data=1192  
+".\STM32_Project.axf" - 0 Errors, 0 Warning(s).
+Build target 'Template'
+compiling menu.c...
+..\User\menu.c(123): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(147): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(148): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(441): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(457): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(482): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(487): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+linking...
+Program Size: Code=17176 RO-data=284 RW-data=296 ZI-data=1192  
+".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
+Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Template'
+compiling menu.c...
+..\User\menu.c(123): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(147): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(148): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(441): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(457): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(482): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(487): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+linking...
+Program Size: Code=17204 RO-data=284 RW-data=296 ZI-data=1192  
+".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
+Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Template'
+compiling menu.c...
+..\User\menu.c(123): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(147): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(148): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(441): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(457): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(482): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(487): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+linking...
+Program Size: Code=17212 RO-data=284 RW-data=296 ZI-data=1192  
+".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
+Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Template'
+compiling DS18B20.c...
+linking...
+Program Size: Code=17236 RO-data=284 RW-data=296 ZI-data=1192  
 ".\STM32_Project.axf" - 0 Errors, 0 Warning(s).
 Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
 Erase Done.
@@ -1187,9 +318,137 @@ Programming Done.
 Verify OK.
 Application running ...
 Build target 'Template'
-compiling LED.c...
+compiling menu.c...
+..\User\menu.c(123): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(147): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(148): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(441): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(457): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(482): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(487): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
 linking...
-Program Size: Code=16692 RO-data=284 RW-data=292 ZI-data=1196  
+Program Size: Code=17232 RO-data=284 RW-data=296 ZI-data=1192  
+".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
+Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Template'
+compiling relay.c...
+compiling menu.c...
+..\User\menu.c(123): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(147): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(148): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(441): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(457): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(482): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(487): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+linking...
+Program Size: Code=17240 RO-data=284 RW-data=296 ZI-data=1192  
+".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
+Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Template'
+compiling menu.c...
+..\User\menu.c(123): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(147): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(148): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(441): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(457): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(482): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(487): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(536): error:  #127: expected a statement
+..\User\menu.c(541): warning:  #12-D: parsing restarts here after previous syntax error
+".\STM32_Project.axf" - 1 Errors, 9 Warning(s).
+Target not created
+Build target 'Template'
+compiling menu.c...
+..\User\menu.c(123): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(147): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(148): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(441): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(457): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(482): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(487): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(536): error:  #127: expected a statement
+..\User\menu.c(541): warning:  #12-D: parsing restarts here after previous syntax error
+..\User\menu.c(578): error:  #260-D: explicit type is missing ("int" assumed)
+..\User\menu.c(578): error:  #92: identifier-list parameters may only be used in a function definition
+..\User\menu.c(578): error:  #147: declaration is incompatible with "void water_exchange(uint8_t)" (declared at line 25 of "..\User\task.h")
+..\User\menu.c(581): error:  #169: expected a declaration
+..\User\menu.c(608): warning: At end of source:  #12-D: parsing restarts here after previous syntax error
+".\STM32_Project.axf" - 5 Errors, 10 Warning(s).
+Target not created
+Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Template'
+compiling menu.c...
+..\User\menu.c(123): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(147): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(148): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(441): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(457): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(482): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(487): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(578): error:  #260-D: explicit type is missing ("int" assumed)
+..\User\menu.c(578): error:  #92: identifier-list parameters may only be used in a function definition
+..\User\menu.c(578): error:  #147: declaration is incompatible with "void water_exchange(uint8_t)" (declared at line 25 of "..\User\task.h")
+..\User\menu.c(581): error:  #169: expected a declaration
+..\User\menu.c(608): warning: At end of source:  #12-D: parsing restarts here after previous syntax error
+".\STM32_Project.axf" - 4 Errors, 9 Warning(s).
+Target not created
+Build target 'Template'
+compiling menu.c...
+..\User\menu.c(123): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(147): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(148): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(441): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(457): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(482): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(487): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+linking...
+Program Size: Code=17256 RO-data=284 RW-data=296 ZI-data=1192  
+".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
+Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Template'
+compiling menu.c...
+..\User\menu.c(123): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(147): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(148): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(441): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(457): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(482): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(487): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+linking...
+Program Size: Code=17316 RO-data=284 RW-data=296 ZI-data=1192  
+".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
+Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Template'
+compiling task.c...
+linking...
+Program Size: Code=17352 RO-data=284 RW-data=296 ZI-data=1192  
 ".\STM32_Project.axf" - 0 Errors, 0 Warning(s).
 Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
 Erase Done.
@@ -1197,20 +456,28 @@ Programming Done.
 Verify OK.
 Application running ...
 Build target 'Template'
+compiling menu.c...
+..\User\menu.c(123): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(147): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(148): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(441): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(457): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(482): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(487): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
 compiling task.c...
-..\User\task.c(56): warning:  #223-D: function "printf" declared implicitly
-..\User\task.c(64): warning:  #223-D: function "printf" declared implicitly
-..\User\task.c(73): warning:  #223-D: function "printf" declared implicitly
-..\User\task.c(83): warning:  #223-D: function "printf" declared implicitly
-..\User\task.c(47): warning:  #177-D: variable "a" was declared but never referenced
-..\User\task.c(47): warning:  #177-D: variable "b" was declared but never referenced
-..\User\task.c(47): warning:  #177-D: variable "c" was declared but never referenced
 linking...
-Program Size: Code=16708 RO-data=284 RW-data=292 ZI-data=1196  
-".\STM32_Project.axf" - 0 Errors, 7 Warning(s).
+Program Size: Code=17368 RO-data=284 RW-data=296 ZI-data=1192  
+".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
+Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
 Build target 'Template'
+compiling task.c...
 linking...
-Program Size: Code=16708 RO-data=284 RW-data=292 ZI-data=1196  
+Program Size: Code=17428 RO-data=284 RW-data=296 ZI-data=1192  
 ".\STM32_Project.axf" - 0 Errors, 0 Warning(s).
 Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
 Erase Done.
@@ -1218,81 +485,397 @@ Programming Done.
 Verify OK.
 Application running ...
 Build target 'Template'
-compiling task.c...
-..\User\task.c(56): warning:  #223-D: function "printf" declared implicitly
-..\User\task.c(64): warning:  #223-D: function "printf" declared implicitly
-..\User\task.c(73): warning:  #223-D: function "printf" declared implicitly
-..\User\task.c(83): warning:  #223-D: function "printf" declared implicitly
-..\User\task.c(47): warning:  #177-D: variable "a" was declared but never referenced
-..\User\task.c(47): warning:  #177-D: variable "b" was declared but never referenced
-..\User\task.c(47): warning:  #177-D: variable "c" was declared but never referenced
+compiling DS18B20.c...
 linking...
-Program Size: Code=16808 RO-data=284 RW-data=292 ZI-data=1196  
-".\STM32_Project.axf" - 0 Errors, 7 Warning(s).
+Program Size: Code=17432 RO-data=284 RW-data=296 ZI-data=1192  
+".\STM32_Project.axf" - 0 Errors, 0 Warning(s).
 Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
 Erase Done.
 Programming Done.
 Verify OK.
 Application running ...
 Build target 'Template'
-compiling task.c...
-..\User\task.c(56): warning:  #223-D: function "printf" declared implicitly
-..\User\task.c(64): warning:  #223-D: function "printf" declared implicitly
-..\User\task.c(73): warning:  #223-D: function "printf" declared implicitly
-..\User\task.c(83): warning:  #223-D: function "printf" declared implicitly
-..\User\task.c(47): warning:  #177-D: variable "a" was declared but never referenced
-..\User\task.c(47): warning:  #177-D: variable "b" was declared but never referenced
-..\User\task.c(47): warning:  #177-D: variable "c" was declared but never referenced
+compiling relay.c...
 linking...
-Program Size: Code=16816 RO-data=284 RW-data=292 ZI-data=1196  
-".\STM32_Project.axf" - 0 Errors, 7 Warning(s).
+Program Size: Code=17432 RO-data=284 RW-data=296 ZI-data=1192  
+".\STM32_Project.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Template'
+compiling relay.c...
+linking...
+Program Size: Code=17432 RO-data=284 RW-data=296 ZI-data=1192  
+".\STM32_Project.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Template'
+compiling menu.c...
+..\User\menu.c(123): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(147): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(148): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(441): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(457): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(482): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(487): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+linking...
+Program Size: Code=17476 RO-data=284 RW-data=296 ZI-data=1192  
+".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
+Build target 'Template'
+compiling menu.c...
+..\User\menu.c(123): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(147): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(148): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(441): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(457): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(482): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(487): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+linking...
+Program Size: Code=17476 RO-data=284 RW-data=296 ZI-data=1192  
+".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
+Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Template'
+compiling relay.c...
+compiling menu.c...
+..\User\menu.c(123): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(147): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(148): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(441): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(457): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(482): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(487): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+linking...
+Program Size: Code=17508 RO-data=284 RW-data=296 ZI-data=1192  
+".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
+Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Template'
+compiling menu.c...
+..\User\menu.c(123): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(147): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(148): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(441): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(457): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(482): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(487): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+linking...
+Program Size: Code=17508 RO-data=284 RW-data=296 ZI-data=1192  
+".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
+Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Template'
+compiling menu.c...
+..\User\menu.c(123): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(147): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(148): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(441): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(457): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(482): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(487): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+linking...
+Program Size: Code=17548 RO-data=284 RW-data=296 ZI-data=1192  
+".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
+Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Template'
+compiling menu.c...
+..\User\menu.c(123): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(147): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(148): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(441): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(457): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(482): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(487): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+linking...
+Program Size: Code=17648 RO-data=284 RW-data=296 ZI-data=1192  
+".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
+Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Template'
+compiling menu.c...
+..\User\menu.c(123): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(147): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(148): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(441): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(457): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(482): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(487): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+linking...
+Program Size: Code=17652 RO-data=284 RW-data=296 ZI-data=1192  
+".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
+Build target 'Template'
+compiling menu.c...
+..\User\menu.c(123): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(147): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(148): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(441): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(457): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(482): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(487): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+linking...
+Program Size: Code=17696 RO-data=284 RW-data=296 ZI-data=1192  
+".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
+Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Template'
+compiling menu.c...
+..\User\menu.c(123): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(147): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(148): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(441): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(457): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(482): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(487): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+linking...
+Program Size: Code=17720 RO-data=284 RW-data=296 ZI-data=1192  
+".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
+Build target 'Template'
+compiling menu.c...
+..\User\menu.c(123): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(147): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(148): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(441): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(457): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(482): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(487): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+linking...
+Program Size: Code=17720 RO-data=284 RW-data=296 ZI-data=1192  
+".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
+Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Template'
+compiling menu.c...
+..\User\menu.c(123): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(147): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(148): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(441): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(457): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(482): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(487): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+linking...
+Program Size: Code=17720 RO-data=284 RW-data=296 ZI-data=1192  
+".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
+Build target 'Template'
+compiling menu.c...
+..\User\menu.c(123): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(147): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(148): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(441): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(457): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(482): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(487): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+compiling task.c...
+linking...
+Program Size: Code=17856 RO-data=284 RW-data=296 ZI-data=1192  
+".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
+Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Template'
+compiling menu.c...
+..\User\menu.c(123): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(147): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(148): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(441): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(457): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(482): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(487): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+linking...
+Program Size: Code=17860 RO-data=284 RW-data=296 ZI-data=1192  
+".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
+Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
 Build target 'Template'
 compiling main.c...
-..\User\main.c(44): warning:  #223-D: function "water_exchange_config" declared implicitly
+..\User\main.c(56): warning:  #111-D: statement is unreachable
 linking...
-Program Size: Code=16820 RO-data=284 RW-data=292 ZI-data=1196  
+Program Size: Code=17856 RO-data=284 RW-data=296 ZI-data=1192  
 ".\STM32_Project.axf" - 0 Errors, 1 Warning(s).
+compiling main.c...
+..\User\main.c(56): warning:  #111-D: statement is unreachable
+"..\User\main.c" - 0 Errors, 1 Warning(s).
 Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
 Erase Done.
 Programming Done.
 Verify OK.
 Application running ...
 Build target 'Template'
-compiling main.c...
-..\User\main.c(44): warning:  #223-D: function "water_exchange_config" declared implicitly
-..\User\main.c(56): error:  #165: too few arguments in function call
 compiling task.c...
-..\User\task.c(49): warning:  #177-D: variable "a" was declared but never referenced
-..\User\task.c(49): warning:  #177-D: variable "b" was declared but never referenced
-..\User\task.c(49): warning:  #177-D: variable "c" was declared but never referenced
-".\STM32_Project.axf" - 1 Errors, 4 Warning(s).
+..\User\task.c(91): error:  #20: identifier "ChangeRelayStat" is undefined
+..\User\task.c(94): error:  #65: expected a ";"
+..\User\task.c(143): warning:  #12-D: parsing restarts here after previous syntax error
+..\User\task.c(148): warning:  #223-D: function "us" declared implicitly
+..\User\task.c(155): error:  #169: expected a declaration
+..\User\task.c(160): warning: At end of source:  #12-D: parsing restarts here after previous syntax error
+".\STM32_Project.axf" - 3 Errors, 3 Warning(s).
 Target not created
 Build target 'Template'
-compiling main.c...
-..\User\main.c(44): warning:  #223-D: function "water_exchange_config" declared implicitly
-..\User\main.c(56): error:  #165: too few arguments in function call
 compiling task.c...
-".\STM32_Project.axf" - 1 Errors, 1 Warning(s).
-Target not created
-Build target 'Template'
-compiling main.c...
-..\User\main.c(44): warning:  #223-D: function "water_exchange_config" declared implicitly
-..\User\main.c(56): error:  #20: identifier "stask_enable" is undefined
-..\User\main.c(56): error:  #140: too many arguments in function call
+..\User\task.c(91): error:  #20: identifier "ChangeRelayStat" is undefined
+..\User\task.c(94): error:  #65: expected a ";"
+..\User\task.c(148): warning:  #12-D: parsing restarts here after previous syntax error
 ".\STM32_Project.axf" - 2 Errors, 1 Warning(s).
 Target not created
 Build target 'Template'
-compiling main.c...
-..\User\main.c(44): warning:  #223-D: function "water_exchange_config" declared implicitly
-..\User\main.c(56): error:  #20: identifier "stask_enable" is undefined
-".\STM32_Project.axf" - 1 Errors, 1 Warning(s).
+compiling task.c...
+..\User\task.c(91): error:  #20: identifier "ChangeRelayStat" is undefined
+..\User\task.c(94): error:  #65: expected a ";"
+..\User\task.c(148): warning:  #12-D: parsing restarts here after previous syntax error
+".\STM32_Project.axf" - 2 Errors, 1 Warning(s).
 Target not created
 Build target 'Template'
-compiling main.c...
-..\User\main.c(44): warning:  #223-D: function "water_exchange_config" declared implicitly
+compiling task.c...
+..\User\task.c(91): error:  #20: identifier "ChangeRelayStat" is undefined
+..\User\task.c(94): error:  #65: expected a ";"
+..\User\task.c(144): warning:  #12-D: parsing restarts here after previous syntax error
+".\STM32_Project.axf" - 2 Errors, 1 Warning(s).
+Target not created
+Build target 'Template'
 compiling task.c...
 linking...
-Program Size: Code=16864 RO-data=284 RW-data=296 ZI-data=1192  
+Program Size: Code=17856 RO-data=284 RW-data=296 ZI-data=1192  
+".\STM32_Project.axf" - 0 Errors, 0 Warning(s).
+Build target 'Template'
+compiling menu.c...
+..\User\menu.c(123): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(147): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(148): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(441): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(457): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(482): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(487): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+linking...
+Program Size: Code=17884 RO-data=284 RW-data=296 ZI-data=1192  
+".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
+Build target 'Template'
+compiling menu.c...
+..\User\menu.c(123): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(147): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(148): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(441): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(457): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(482): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(487): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+linking...
+Program Size: Code=17912 RO-data=284 RW-data=296 ZI-data=1192  
+".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
+Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Template'
+compiling main.c...
+..\User\main.c(51): warning:  #223-D: function "ledoff" declared implicitly
+..\User\main.c(57): warning:  #111-D: statement is unreachable
+linking...
+.\STM32_Project.axf: Error: L6218E: Undefined symbol ledoff (referred from main.o).
+".\STM32_Project.axf" - 1 Errors, 2 Warning(s).
+Target not created
+Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
+_____^
+*** error 56: cannot open file
+Build target 'Template'
+compiling main.c...
+..\User\main.c(57): warning:  #111-D: statement is unreachable
+linking...
+Program Size: Code=17916 RO-data=284 RW-data=296 ZI-data=1192  
+".\STM32_Project.axf" - 0 Errors, 1 Warning(s).
+Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Template'
+linking...
+Program Size: Code=17916 RO-data=284 RW-data=296 ZI-data=1192  
+".\STM32_Project.axf" - 0 Errors, 0 Warning(s).
+Build target 'Template'
+linking...
+Program Size: Code=17916 RO-data=284 RW-data=296 ZI-data=1192  
+".\STM32_Project.axf" - 0 Errors, 0 Warning(s).
+Build target 'Template'
+compiling USART.c...
+..\Driver\USART.c(59): warning:  #128-D: loop is not reachable
+linking...
+Program Size: Code=17892 RO-data=284 RW-data=296 ZI-data=1192  
+".\STM32_Project.axf" - 0 Errors, 1 Warning(s).
+Build target 'Template'
+compiling relay.c...
+linking...
+Program Size: Code=17892 RO-data=284 RW-data=296 ZI-data=1192  
+".\STM32_Project.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Template'
+linking...
+Program Size: Code=17892 RO-data=284 RW-data=296 ZI-data=1192  
+".\STM32_Project.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Template'
+compiling main.c...
+..\User\main.c(57): warning:  #111-D: statement is unreachable
+linking...
+Program Size: Code=17892 RO-data=284 RW-data=296 ZI-data=1192  
 ".\STM32_Project.axf" - 0 Errors, 1 Warning(s).
 Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
 Erase Done.
@@ -1301,13 +884,32 @@ Verify OK.
 Application running ...
 Build target 'Template'
 compiling main.c...
+..\User\main.c(56): warning:  #111-D: statement is unreachable
+compiling menu.c...
+..\User\menu.c(123): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(147): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(148): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(441): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(457): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(482): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(487): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
 linking...
-Program Size: Code=16860 RO-data=284 RW-data=296 ZI-data=1192  
-".\STM32_Project.axf" - 0 Errors, 0 Warning(s).
+Program Size: Code=17892 RO-data=284 RW-data=296 ZI-data=1192  
+".\STM32_Project.axf" - 0 Errors, 9 Warning(s).
 Build target 'Template'
+compiling menu.c...
+..\User\menu.c(123): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(147): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(148): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(441): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(457): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(482): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(487): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
 linking...
-Program Size: Code=16860 RO-data=284 RW-data=296 ZI-data=1192  
-".\STM32_Project.axf" - 0 Errors, 0 Warning(s).
+Program Size: Code=17892 RO-data=284 RW-data=296 ZI-data=1192  
+".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
 Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
 Erase Done.
 Programming Done.
@@ -1315,30 +917,68 @@ Verify OK.
 Application running ...
 Build target 'Template'
 compiling main.c...
-compiling task.c...
+..\User\main.c(57): warning:  #111-D: statement is unreachable
 linking...
-Program Size: Code=16868 RO-data=284 RW-data=296 ZI-data=1192  
-".\STM32_Project.axf" - 0 Errors, 0 Warning(s).
+Program Size: Code=17908 RO-data=284 RW-data=296 ZI-data=1192  
+".\STM32_Project.axf" - 0 Errors, 1 Warning(s).
 Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
 Erase Done.
 Programming Done.
 Verify OK.
 Application running ...
 Build target 'Template'
-compiling task.c...
+compiling menu.c...
+..\User\menu.c(123): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(147): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(148): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(441): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(457): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(473): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(482): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(487): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
 linking...
-Program Size: Code=16868 RO-data=284 RW-data=292 ZI-data=1196  
-".\STM32_Project.axf" - 0 Errors, 0 Warning(s).
+Program Size: Code=17908 RO-data=284 RW-data=296 ZI-data=1192  
+".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
 Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
 Erase Done.
 Programming Done.
 Verify OK.
 Application running ...
 Build target 'Template'
-compiling task.c...
+compiling menu.c...
+..\User\menu.c(123): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(147): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(148): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+..\User\menu.c(445): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(461): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(477): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(486): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
+..\User\menu.c(491): warning:  #167-D: argument of type "int8_t *" is incompatible with parameter of type "char *"
 linking...
-Program Size: Code=16856 RO-data=284 RW-data=292 ZI-data=1196  
-".\STM32_Project.axf" - 0 Errors, 0 Warning(s).
+Program Size: Code=17932 RO-data=284 RW-data=296 ZI-data=1192  
+".\STM32_Project.axf" - 0 Errors, 8 Warning(s).
+Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Template'
+compiling main.c...
+..\User\main.c(59): warning:  #111-D: statement is unreachable
+linking...
+Program Size: Code=17940 RO-data=284 RW-data=296 ZI-data=1192  
+".\STM32_Project.axf" - 0 Errors, 1 Warning(s).
+Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Template'
+compiling main.c...
+..\User\main.c(59): warning:  #111-D: statement is unreachable
+linking...
+Program Size: Code=17940 RO-data=284 RW-data=296 ZI-data=1192  
+".\STM32_Project.axf" - 0 Errors, 1 Warning(s).
 Load "C:\\Users\\admin\\×ÀÃæ\\ê«ºìÎ°\\stm32\\mdk\\Project\\STM32_Project.axf" 
 Erase Done.
 Programming Done.

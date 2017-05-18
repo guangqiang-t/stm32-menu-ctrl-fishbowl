@@ -25,8 +25,12 @@ void assert_failed(uint8_t* file, uint32_t line)
 int main (void)
 {
 //	uint8_t k=0;
+	
+	
+	DelayMs(500);
 	led_config();
 	USART1_Config();
+	DelayMs(300);
 	LcdInit();
 	menu_all_config();
 	NVIC_Config();
@@ -38,29 +42,20 @@ int main (void)
 	printf("sys init ok \r\n");
 	ds18b20_start();
 	KeyConfig();
-	
 	RelayConfig();
-
-	//water_exchange_config();
-	//ChangeRelayStatus(jiawen,NO);
+	task_init(gp_task_huanshui,stask_disable,stask_start);
 	
-	DelayMs(200);
 	while(1)
 
 	{
-		
-		//get_low_water();
 		led_on();
-		DelayMs(1000);
+		DelayMs(80);
 		led_off();
-		water_exchange(stask_start);
 		__handle_key();
 		menu_display();
 		__handle_operate();
-		
-		
 	}
 	
-//	return 0;
+	return 0;
 }
 
